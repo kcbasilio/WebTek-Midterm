@@ -1,0 +1,26 @@
+/* GENERAL PROPERTIES */
+body {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+/* ***NAVIGAGTION BAR*** */
+
+/* ***HEADER*** */
+.header {
+  width: 100%;
+  background: 1px solid black;
+}
+/* ***CONTENT/BODY*** */
+.content {
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+  background: 1px solid black;
+  background-color: #ccffcc;
+}
+/* ***FOOTER*** */
