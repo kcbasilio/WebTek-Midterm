@@ -1,37 +1,21 @@
 /**********************/
 /* ***GENERAL PROPERTIES*** */
 /**********************/
-
-body, html {
+* {
   margin: 0;
   padding: 0;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body, html {
   height: 100%;
 }
-/* p {
-  font-size: 2.5em;
-  line-height: 3.75em;
-  font-family: cursive;
-  border: 1px solid black; 
-} */
 
-h1 {
-  /* border: 1px solid black;   */
-  width: 100%;
-}
-
-li {
-  font-family: cursive;
- }
-
- a {
-   text-decoration: none;
- }
 .wrapper {
-  width: 100%;
   height: 100%;
 }
 
@@ -40,223 +24,89 @@ li {
 /**********************/
 
 nav {
-  /* background-color: rgb(0, 0, 0); */
-  width: 100%;
-  height: 70px;
+  z-index: 9999;
+  padding: 10px;
+  height: 80px;
 }
+
 nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  /* border: 1px solid white; */
-  height: inherit;
-  margin: 0;
-  padding: 0;
-
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(246, 204, 153);
+  border-radius: 5px;
 }
+
 nav ul li {
-  color: rgb(0,0,0);
-  list-style-type: none;
-  /* border: 1px solid white; */
-  padding: 20px;
-  height: inherit;
-  text-align: center;
-  font-size: 120%;
-}
-
-/**********************/
-/* ***HEADER*** */
-/**********************/
-
-header {
-  display: float;
-  width: 100%;
-  height: 100%;
-  /* border: 1px solid white; */
-  /* background-color: black; */
-  /* background: url('../img/Minimalist12.jpg'); */
-  /* background-attachment: fixed;
-  background-size: cover; */
-}
-#headerleft {
   float: left;
-  display: flex;
-  justify-content: center;
-  align-items: fle;
-  width: 60%;
-  height: 100%;
-  /* border: 1px solid black; */
+  list-style: none;
+  font-size: 1.5em;
+  margin: 12px 20px 0px;
 }
 
-#headerleft .container {
-  /* border: 1px solid black; */
-  /* background-color: black; */
-  padding: 250px;
+nav ul li a {
+  color: white;
 }
 
-#headerleft .searchbox {
-  width: 100%;
-  /* border: 1px solid black; */
+nav ul li a:hover {
+  color: #000000;
+  text-decoration: none;
 }
 
-#headerright {
-  float: right;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-  width: 40%;
-  height: 100%;
-  /* border: 1px solid black; */
-}
-
-#headerleft h1, p {
-  color: grey;
-}
-
-#box-container {
-  width: 300px;
-  height: 300px;
-}
-
-#headerright .box {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background-color: black;
-  transition: 0.5s;
-  border-radius: 20px;
-}
-
-#headerright #box-container .box:nth-child(4) {
-  background-color: red;
-  transform: rotate(10deg);
-}
-
-#headerright #box-container .box:nth-child(3) {
-  background-color: blue;
-  transform: rotate(6deg);
-
-}
-
-#headerright #box-container .box:nth-child(2) {
-  background-color: green;
-  transform: rotate(4deg);
-}
-
-#headerright #box-container .box:nth-child(1) {
-  background-color: yellow;
-  transform: rotate(2deg);
-}
-
-#headerright #box-container:hover .box:nth-child(4) {
-  background-color: red;
-  transform: rotate(14deg) translate(130px, 50px);
-  transition: 0.5s;
-}
-
-#headerright #box-container:hover .box:nth-child(3) {
-  background-color: blue;
-  transform: rotate(-15deg) translate(-110px, 50px);
-  transition: 0.5s;
-}
-
-#headerright #box-container:hover .box:nth-child(2) {
-  background-color: green;
-  transform: rotate(8deg) translate(130px, -120px);
-  transition: 0.5s;
-}
-
-#headerright #box-container:hover .box:nth-child(1) {
-  background-color: yellow;
-  transform: rotate(-8deg) translate(-110px, -120px);
-  transition: 0.5s;
-}
-
-.subheader {
-  text-align: center;
+#navlogo {
+  margin: -43px 20px 0px;
+  font-size: 6.0em;
 }
 
 /**********************/
 /* ***CONTENT/BODY*** */
 /**********************/
 
-.content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(7, 1fr);
-  grid-gap: 15px;
-  /* grid-template-areas: 
-    "first"
-    "first"
-    "second"; */
-  margin-top: 10px;
-  width: 100%;
-  background: 1px solid black;
-  /* background-color: #ccffcc; */
-}
-.content>section {
-  overflow: hidden;
-  border: 1px solid black;
-  width: 100%;
-}
-
-.section.child {
-  background: url("../img/Minimalist12.jpg");
+#intro-content {
+  margin-top: -80px;
   width: 100%;
   height: 100%;
-  background-position: center;
-  background-size: cover;
-  transition: 0.5s;
+  overflow: hidden;
 }
 
-.section.child:hover {
-  transform: scale(1.3);
-  transition: 0.5s;
+.intro-content-box {
+  position: relative;
+  margin-top: 80px;
+  float: left;
+  height: inherit;
+  width: 50%;
 }
 
-.sections1 {
-  grid-row: 1 / 3;
-  height: 500px;
+.intro-content-box .one {
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  padding: 10px;
+  margin-top: -200px;
 }
 
-.sections2 {
-  grid-column: 2 / 4;
+.intro-content-box .one h1 {
+  font-size: 8.0em;
+  text-align: right;
 }
 
-.sections3 {
+.intro-content-box .one .startsearch-btn {
+  background-color: rgb(246, 204, 153);
+  border-color: rgb(246, 204, 153);
+  font-size: 1.6em;
+  float: right;
+  margin-right: -110px;
 }
 
-.sections4 {
-  grid-column: 3 / 4;
-  grid-row: 2 / 4;
+.intro-content-box .two {
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  padding: 10px;
+  margin-top: -200px;
 }
 
-.sections5 {
-  grid-column: 1 / 3;
+.intro-content-box .two p {
+  font-size: 2em;
+  margin-top: 55px;
+  text-align: left;
 }
-
-.sections6 {
-  grid-row: 4 / 6;
-}
-
-.sections7 {
-  grid-column: 2 / 4;
-}
-
-.sections8 {
-  grid-row: 5 / 7;
-}
-
-.sections9 {
-  grid-row: 5 / 7;
-}
-
-.sections10 {
-}
-
-
-/**********************/
-/* ***FOOTER*** */
-/*********************/
-
-     

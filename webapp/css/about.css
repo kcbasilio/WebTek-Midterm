@@ -1,0 +1,12 @@
+.description {
+	padding: 20px;
+	text-indent: 20px;
+}
+
+.description h1 {
+	text-align: center;
+}
+
+.description h1 + p {
+	text-align: center;
+}
