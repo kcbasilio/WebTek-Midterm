@@ -1,31 +1,35 @@
-// LIST NEW PHOTOS
+$(document).ready(function() {
+	var domain = "https://api.edamam.com/search";
+	var app_id = "40cae619";
+	var app_key = "1b6db03230c404ca39f1ea74de1724fc";
+	$("#submit-recipe").click( function() {
+		var query = $("#recipe").val();
+		$.getJSON(domain + "?q=" + query + "&app_id=" + app_id + "&app_key=" + app_key, function(data) {
+			console.table(data);
+			var counter = 1;
+			$.each(data, function(index, value) {
+				$.each(data.hits, function(index, value) {
+					var label = value.recipe.label;
+					var image = value.recipe.image;
+					console.log(image);
+					$("#recipe-title" + counter).text(label);
+					$(".recipe-info-title" + counter).text(label);
+					$("#result-subbox-image" + counter).attr("src", image);
+					counter++;
+				});
+			});
+  		});
+  	});
+});
+
 // $(document).ready(function() {
-//   $.getJSON("https://api.unsplash.com/photos/?client_id=9f775bdbac9e08ea9395a8b666b7e9e9d55826827f20cf119a6e8ce5ef1c7925", function(data) {
-//     console.log(data);
-//     var i = 0;
-//     $.each(data, function(index, value) {
-//       var user = value.user.username;
-//       var likes = value.likes;
-//       var photo = value.urls.regular;
-//       // console.log(".title." + i);
-//       $(".name." + i).text(user);
-//       $(".image." + i).attr("src", photo);
-//       // $(".title." + i).text(likes);
-//       i++;
+//     $.getJSON("", function(data) {
+//      	console.log(data);
 //     });
-//   });
 // });
 
-// LIST COLLECTIONS 
 // $(document).ready(function() {
-//     $.getJSON("https://api.unsplash.com/collections/featured?client_id=9f775bdbac9e08ea9395a8b666b7e9e9d55826827f20cf119a6e8ce5ef1c7925", function(data) {
-//       console.log(data);
-//     });
-// });
-
-// // SEARCH PHOTO BY KEYWORD
-// $(document).ready(function() {
-//     $.getJSON("https://api.unsplash.com/search/photos/?page=2&query=forest&client_id=9f775bdbac9e08ea9395a8b666b7e9e9d55826827f20cf119a6e8ce5ef1c7925", function(data) {
-//       console.log(data);
+//     $.getJSON("", function(data) {
+//      	console.log(data);
 //     });
 // });

@@ -8,8 +8,9 @@
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/master.css">
   <link rel="stylesheet" href="../css/home.css">
-  <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.js"></script>
+  <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="../js/main.js"></script>
 <!--   <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script> -->
   <title>WikiCook</title>
@@ -29,25 +30,126 @@
           <div class="form-group mb-2">
             <input type="text" class="form-control" id="recipe" placeholder="Search recipe..">
           </div>
-          <button type="submit" class="btn btn-primary mb-2">Search</button>
+          <button type="button" class="btn btn-primary mb-2" id="submit-recipe">Search</button>
         </form>
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li class="dropdown-header">Dropdown header 1</li>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-header">Dropdown header 2</li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </div>
       </div>
       <div class="result">
         <h3>Search Results:</h3>
+        <a href="">Back to All Recipe</a>
         <hr>
         <div class="result-box">
-          <a href="#"><div class="result-subbox one"></div></a>
-          <a href="#"><div class="result-subbox two"></div></a>
-          <a href="#"><div class="result-subbox three"></div></a>
-          <a href="#"><div class="result-subbox four"></div></a>
-          <a href="#"><div class="result-subbox five"></div></a>
-          <a href="#"><div class="result-subbox six"></div>
-          <a href="#"><div class="result-subbox seven"></div></a>
-          <a href="#"><div class="result-subbox eight"></div></a>
+          <figure class="result-subbox" data-number="one">
+            <img id="result-subbox-image1" src="" alt="" data-image="info1">
+            <h2 class="view-prompt" id="view-info1">View Recipe</h2>
+            <figcaption class="lead" id="recipe-title1"></figcaption>
+          </figure>
+          <figure class="result-subbox" data-number="two">
+            <img id="result-subbox-image2" src="" alt="" data-image="info2">
+            <h2 class="view-prompt" id="view-info2">View Recipe</h2>
+            <figcaption class="lead" id="recipe-title2"></figcaption>
+          </figure>
+          <figure class="result-subbox" data-number="three">
+            <img id="result-subbox-image3" src="" alt="" data-image="info3">
+            <h2 class="view-prompt" id="view-info3">View Recipe</h2>
+            <figcaption class="lead" id="recipe-title3"></figcaption>
+          </figure>
+          <figure class="result-subbox" data-number="four">
+            <img id="result-subbox-image4" src="" alt="" data-image="info4">
+            <h2 class="view-prompt" id="view-info4">View Recipe</h2>
+            <figcaption class="lead" id="recipe-title4"></figcaption>
+          </figure>
+          <figure class="result-subbox" data-number="five">
+            <img id="result-subbox-image5" src="" alt="" data-image="info5">
+            <h2 class="view-prompt" id="view-info5">View Recipe</h2>
+            <figcaption class="lead" id="recipe-title5"></figcaption>
+          </figure>
+          <figure class="result-subbox" data-number="six">
+            <img id="result-subbox-image6" src="" alt="" data-image="info6">
+            <h2 class="view-prompt" id="view-info6">View Recipe</h2>
+            <figcaption class="lead" id="recipe-title6"></figcaption>
+          </figure>
+          <figure class="result-subbox" data-number="seven">
+            <img id="result-subbox-image7" src="" alt="" data-image="info7">
+            <h2 class="view-prompt" id="view-info7">View Recipe</h2>
+            <figcaption class="lead" id="recipe-title7"></figcaption>
+          </figure>
+          <figure class="result-subbox" data-number="eight">
+            <img id="result-subbox-image8" src="" alt="" data-image="info8">
+            <h2 class="view-prompt" id="view-info8">View Recipe</h2>
+            <figcaption class="lead" id="recipe-title8"></figcaption>
+          </figure>
+          <figure class="result-subbox" data-number="nine">
+            <img id="result-subbox-image9" src="" alt="" data-image="info9">
+            <h2 class="view-prompt" id="view-info9">View Recipe</h2>
+            <figcaption class="lead" id="recipe-title9"></figcaption>
+          </figure>
+          <figure class="result-subbox" data-number="ten">
+            <img id="result-subbox-image10" src="" alt="" data-image="info10">
+            <h2 class="view-prompt" id="view-info10">View Info</h2>
+            <figcaption class="lead" id="recipe-title10"></figcaption>
+          </figure>
+        </div>
+        <div class="recipe-info" id="one">
+          <h1 class="recipe-info-title1">Recipe 1</h1>
+        </div>
+        <div class="recipe-info" id="two">
+          <h1 class="recipe-info-title2"></h1>
+        </div>
+        <div class="recipe-info" id="three">
+          <h1 class="recipe-info-title3"></h1>
+        </div>
+        <div class="recipe-info" id="four">
+          <h1 class="recipe-info-title4"></h1>
+        </div>
+        <div class="recipe-info" id="five">
+          <h1 class="recipe-info-title5"></h1>
+        </div>
+        <div class="recipe-info" id="six">
+          <h1 class="recipe-info-title6"></h1>
+        </div>
+        <div class="recipe-info" id="seven">
+          <h1 class="recipe-info-title7"></h1>
+        </div>
+        <div class="recipe-info" id="eight">
+          <h1 class="recipe-info-title8"></h1>
+        </div>
+        <div class="recipe-info" id="nine">
+          <h1 class="recipe-info-title9"></h1>
+        </div>
+        <div class="recipe-info" id="ten">
+          <h1 class="recipe-info-title10"></h1>
         </div>
       </div>
     </div>
   </div>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".recipe-info,.view-prompt").hide();
+      $(".result-subbox").click(function() {
+        $(".result-box").fadeOut(500);
+        var boxNumber = $(this).attr("data-number");
+        console.log(boxNumber);
+        $("#" + boxNumber).fadeIn(1000);
+      });
+      $("img").hover(function() {
+        var view = $(this).attr("data-image");
+        $("#view-" + view).fadeToggle(200);
+      })
+    });
+  </script>
 </body>
 
 </html>
