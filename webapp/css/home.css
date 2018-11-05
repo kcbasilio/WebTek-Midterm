@@ -9,8 +9,14 @@
 	width: 100%;
 }
 
-/***************/
+.filter {
+	padding: 10px;
+} 
 
+/***************/
+.result #label {
+	padding: 10px;
+}
 .result-box {
 	display: flex;
 	flex-wrap: wrap;
@@ -49,6 +55,7 @@
 
 .result-subbox img:hover {
 	transition: 0.3s;
+	cursor: pointer;
 	transform: scale(1.3);
 	filter: brightness(50%);
 }
@@ -73,8 +80,57 @@
 /***************/
 
 .recipe-info {
-	border: 1px solid black; /*rgb(230, 230, 230)*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: space-around;
+	border: 1px solid rgb(230, 230, 230); /*rgb(230, 230, 230)*/
 	border-radius: 5px;
 	padding: 10px;
 	height: 775px;
+}
+
+.recipe-info-title {
+	text-align: center;	
+	width: 100%;
+	/*border: 1px solid black;*/
+}
+
+.recipe-info-content {
+	border: 1px solid rgb(230, 230, 230); /*rgb(230, 230, 230)*/
+	width: 30%;
+	height: 670px;
+	overflow: scroll;
+}
+
+.recipe-info-content h4 {
+	text-align: center;
+	margin-top: 20px;
+	/*border: 1px solid black;*/
+}
+
+.image-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.image-container-box {
+	width: 430px;
+	height: 380px;
+	border-radius: 5px;
+}
+
+.ingredients-container-list {
+	/*border: 1px solid black; /*rgb(230, 230, 230)*/
+	padding: 25px;
+}
+
+.ingredients-container-list ul li {
+	/*border: 1px solid black; /*rgb(230, 230, 230)*/
+	margin-bottom: 20px;
+}
+
+.nutritionfacts-container-table {
+	padding: 10px;
 }
