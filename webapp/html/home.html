@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/master.css">
   <link rel="stylesheet" href="../css/home.css">
-  
+
 <!--   <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script> -->
   <title>WikiCook</title>
@@ -26,70 +26,105 @@
       <div class="search-bar-box">
         <form class="form-inline">
           <div class="form-group mb-2">
-            <input type="text" class="form-control" id="recipe" placeholder="Search recipe..">
+            <input type="text" class="form-control" id="recipe" placeholder="Calorie..">
+          </div>
+          <div class="form-group mb-2">
+            <input type="text" class="form-control" id="recipe" placeholder="Protein..">
+          </div>
+          <div class="form-group mb-2">
+            <input type="text" class="form-control" id="recipe" placeholder="Fat..">
+          </div>
+          <div class="form-group mb-2">
+            <input type="text" class="form-control" id="recipe" placeholder="Carbohydrate..">
+          </div>
+          <div class="form-group mb-2">
+            <input type="text" class="form-control" id="recipe" placeholder="Search ingredient..">
           </div>
           <button type="button" class="btn btn-primary mb-2" id="submit-recipe">Search</button>
         </form>
-        <div class="filter">
-          <h3>Filter:</h3>
-          <form class="form-inline">
-            <div class="form-group mb-2">
-              <label for="">Calorie Range:&nbsp;</label>
-              <input type="text" class="form-control" id="mincal" placeholder="Min calorie..">
-              <input type="text" class="form-control" id="maxcal" placeholder="Max Calorie..">
-            </div>
+        <button id="showfilter" class="btn btn-primary">Show Filters</button>
+        <div>
+        <form>
+            <label>Cuisine:</label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value=""> African
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value=""> American
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value=""> British
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value=""> Option 3
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value=""> Chinese
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value=""> French
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value=""> German
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value=""> Indian
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value=""> Italian
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" value=""> Korean
+            </label>
           </form>
-          <form class="form-inline">
-            <div class="form-group mb-2">
-              <label for="">Cooking Time:&nbsp;</label>
-              <input type="text" class="form-control" id="mintime" placeholder="Min time..">
-              <input type="text" class="form-control" id="maxtime" placeholder="Max time..">
-            </div>
-          </form>
-          <h5>Diets</h5>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="" value="balanced">
-            <label class="form-check-label" for="">Balanced</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="" value="protein">
-            <label class="form-check-label" for="">Protein</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="" value="lowfat">
-            <label class="form-check-label" for="">Low-Fat</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="" value="lowcarb">
-            <label class="form-check-label" for="">Low-Carb</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="" value="vegan">
-            <label class="form-check-label" for="">Vegan</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="" value="vegetarian">
-            <label class="form-check-label" for="">Vegetarian</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="" value="?">
-            <label class="form-check-label" for="">?</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="" value="alcoholfree">
-            <label class="form-check-label" for="">Alcohol-Free</label>
-          </div>
-          <h5>Allergies</h5>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="" value="sugarconscious">
-            <label class="form-check-label" for="">Sugar Conscious</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="" value="alcoholfree">
-            <label class="form-check-label" for="">Alcohol-Free</label>
-          </div>
+          <form>
+              <label>Diets:</label>
+              <label class="checkbox-inline">
+                <input type="checkbox" value=""> African
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" value=""> American
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" value=""> British
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" value=""> Option 3
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" value=""> Chinese
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" value=""> French
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" value=""> German
+              </label>
+            </form>
+            <form>
+                <label>Allergies/Intolerances:</label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" value=""> African
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" value=""> American
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" value=""> British
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" value=""> Option 3
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" value=""> Chinese
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" value=""> French
+                </label>
+              </form>
         </div>
       </div>
+
 <!--       <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown button
