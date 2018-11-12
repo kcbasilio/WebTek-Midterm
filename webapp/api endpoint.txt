@@ -1,0 +1,3 @@
+Search Recipes by Ingredients
+https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients
+Paramaters: fillIngredients,ingredients,limitLicense,number,ranking

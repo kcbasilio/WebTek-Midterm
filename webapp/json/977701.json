@@ -1,0 +1,772 @@
+{
+    "vegetarian": true,
+    "vegan": false,
+    "glutenFree": true,
+    "dairyFree": true,
+    "veryHealthy": false,
+    "cheap": false,
+    "veryPopular": true,
+    "sustainable": false,
+    "weightWatcherSmartPoints": 1,
+    "gaps": "no",
+    "lowFodmap": true,
+    "ketogenic": false,
+    "whole30": true,
+    "preparationMinutes": 10,
+    "cookingMinutes": 5,
+    "sourceUrl": "https://cookingwithcurls.com/2016/12/19/instant-pot-hard-boiled-eggs/",
+    "spoonacularSourceUrl": "https://spoonacular.com/instant-pot-hard-boiled-eggs-977701",
+    "aggregateLikes": 9128,
+    "spoonacularScore": 27,
+    "healthScore": 1,
+    "creditText": "Cooking with Curls",
+    "sourceName": "Cooking with Curls",
+    "pricePerServing": 24,
+    "extendedIngredients": [
+        {
+            "id": 1123,
+            "aisle": "Milk, Eggs, Other Dairy",
+            "image": "egg.jpg",
+            "consitency": "solid",
+            "name": "eggs",
+            "original": "12 large eggs",
+            "originalString": "12 large eggs",
+            "originalName": null,
+            "amount": 12,
+            "unit": "",
+            "meta": [
+                "large"
+            ],
+            "metaInformation": [
+                "large"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 12,
+                    "unitShort": "",
+                    "unitLong": ""
+                },
+                "metric": {
+                    "amount": 12,
+                    "unitShort": "",
+                    "unitLong": ""
+                }
+            }
+        },
+        {
+            "id": 10014412,
+            "aisle": "Frozen",
+            "image": "ice-cubes.jpg",
+            "consitency": "solid",
+            "name": "ice",
+            "original": "ice",
+            "originalString": "ice",
+            "originalName": null,
+            "amount": 12,
+            "unit": "servings",
+            "meta": [],
+            "metaInformation": [],
+            "measures": {
+                "us": {
+                    "amount": 12,
+                    "unitShort": "servings",
+                    "unitLong": "servings"
+                },
+                "metric": {
+                    "amount": 12,
+                    "unitShort": "servings",
+                    "unitLong": "servings"
+                }
+            }
+        },
+        {
+            "id": 14412,
+            "aisle": "Beverages",
+            "image": "water.png",
+            "consitency": "liquid",
+            "name": "water",
+            "original": "1 cup water",
+            "originalString": "1 cup water",
+            "originalName": null,
+            "amount": 1,
+            "unit": "cup",
+            "meta": [],
+            "metaInformation": [],
+            "measures": {
+                "us": {
+                    "amount": 1,
+                    "unitShort": "cup",
+                    "unitLong": "cup"
+                },
+                "metric": {
+                    "amount": 236.588,
+                    "unitShort": "g",
+                    "unitLong": "grams"
+                }
+            }
+        }
+    ],
+    "id": 977701,
+    "title": "Instant Pot Hard Boiled Eggs",
+    "readyInMinutes": 15,
+    "servings": 12,
+    "image": "https://spoonacular.com/recipeImages/977701-556x370.jpg",
+    "imageType": "jpg",
+    "nutrition": {
+        "nutrients": [
+            {
+                "title": "Calories",
+                "amount": 62.92,
+                "unit": "cal",
+                "percentOfDailyNeeds": 3.15
+            },
+            {
+                "title": "Fat",
+                "amount": 4.18,
+                "unit": "g",
+                "percentOfDailyNeeds": 6.44
+            },
+            {
+                "title": "Saturated Fat",
+                "amount": 1.38,
+                "unit": "g",
+                "percentOfDailyNeeds": 8.6
+            },
+            {
+                "title": "Carbohydrates",
+                "amount": 0.32,
+                "unit": "g",
+                "percentOfDailyNeeds": 0.11
+            },
+            {
+                "title": "Sugar",
+                "amount": 0.16,
+                "unit": "g",
+                "percentOfDailyNeeds": 0.18
+            },
+            {
+                "title": "Cholesterol",
+                "amount": 163.68,
+                "unit": "mg",
+                "percentOfDailyNeeds": 54.56
+            },
+            {
+                "title": "Sodium",
+                "amount": 66.32,
+                "unit": "mg",
+                "percentOfDailyNeeds": 2.88
+            },
+            {
+                "title": "Protein",
+                "amount": 5.53,
+                "unit": "g",
+                "percentOfDailyNeeds": 11.05
+            },
+            {
+                "title": "Selenium",
+                "amount": 13.51,
+                "unit": "µg",
+                "percentOfDailyNeeds": 19.3
+            },
+            {
+                "title": "Vitamin B2",
+                "amount": 0.2,
+                "unit": "mg",
+                "percentOfDailyNeeds": 11.83
+            },
+            {
+                "title": "Phosphorus",
+                "amount": 87.12,
+                "unit": "mg",
+                "percentOfDailyNeeds": 8.71
+            },
+            {
+                "title": "Vitamin B5",
+                "amount": 0.67,
+                "unit": "mg",
+                "percentOfDailyNeeds": 6.75
+            },
+            {
+                "title": "Vitamin B12",
+                "amount": 0.39,
+                "unit": "µg",
+                "percentOfDailyNeeds": 6.53
+            },
+            {
+                "title": "Vitamin D",
+                "amount": 0.88,
+                "unit": "µg",
+                "percentOfDailyNeeds": 5.87
+            },
+            {
+                "title": "Folate",
+                "amount": 20.68,
+                "unit": "µg",
+                "percentOfDailyNeeds": 5.17
+            },
+            {
+                "title": "Vitamin A",
+                "amount": 237.6,
+                "unit": "IU",
+                "percentOfDailyNeeds": 4.75
+            },
+            {
+                "title": "Iron",
+                "amount": 0.77,
+                "unit": "mg",
+                "percentOfDailyNeeds": 4.28
+            },
+            {
+                "title": "Zinc",
+                "amount": 0.58,
+                "unit": "mg",
+                "percentOfDailyNeeds": 3.84
+            },
+            {
+                "title": "Vitamin B6",
+                "amount": 0.07,
+                "unit": "mg",
+                "percentOfDailyNeeds": 3.74
+            },
+            {
+                "title": "Vitamin E",
+                "amount": 0.46,
+                "unit": "mg",
+                "percentOfDailyNeeds": 3.08
+            },
+            {
+                "title": "Calcium",
+                "amount": 26.95,
+                "unit": "mg",
+                "percentOfDailyNeeds": 2.69
+            },
+            {
+                "title": "Copper",
+                "amount": 0.04,
+                "unit": "mg",
+                "percentOfDailyNeeds": 2.2
+            },
+            {
+                "title": "Potassium",
+                "amount": 60.72,
+                "unit": "mg",
+                "percentOfDailyNeeds": 1.73
+            },
+            {
+                "title": "Magnesium",
+                "amount": 6.05,
+                "unit": "mg",
+                "percentOfDailyNeeds": 1.51
+            },
+            {
+                "title": "Vitamin B1",
+                "amount": 0.02,
+                "unit": "mg",
+                "percentOfDailyNeeds": 1.17
+            }
+        ],
+        "ingredients": [
+            {
+                "name": "eggs",
+                "amount": 1,
+                "unit": "",
+                "nutrients": [
+                    {
+                        "name": "Fiber",
+                        "amount": 0,
+                        "unit": "g"
+                    },
+                    {
+                        "name": "Fluoride",
+                        "amount": 0.48,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Fat",
+                        "amount": 4.18,
+                        "unit": "g"
+                    },
+                    {
+                        "name": "Vitamin B5",
+                        "amount": 0.67,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Vitamin B1",
+                        "amount": 0.02,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Zinc",
+                        "amount": 0.57,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Saturated Fat",
+                        "amount": 1.38,
+                        "unit": "g"
+                    },
+                    {
+                        "name": "Calcium",
+                        "amount": 24.64,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Iron",
+                        "amount": 0.77,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Cholesterol",
+                        "amount": 163.68,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Caffeine",
+                        "amount": 0,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Sodium",
+                        "amount": 62.48,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Folate",
+                        "amount": 20.68,
+                        "unit": "µg"
+                    },
+                    {
+                        "name": "Mono Unsaturated Fat",
+                        "amount": 1.61,
+                        "unit": "g"
+                    },
+                    {
+                        "name": "Calories",
+                        "amount": 62.92,
+                        "unit": "cal"
+                    },
+                    {
+                        "name": "Folic Acid",
+                        "amount": 0,
+                        "unit": "µg"
+                    },
+                    {
+                        "name": "Copper",
+                        "amount": 0.03,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Manganese",
+                        "amount": 0.01,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Vitamin E",
+                        "amount": 0.46,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Alcohol",
+                        "amount": 0,
+                        "unit": "g"
+                    },
+                    {
+                        "name": "Selenium",
+                        "amount": 13.51,
+                        "unit": "µg"
+                    },
+                    {
+                        "name": "Vitamin D",
+                        "amount": 0.88,
+                        "unit": "µg"
+                    },
+                    {
+                        "name": "Vitamin B2",
+                        "amount": 0.2,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Magnesium",
+                        "amount": 5.28,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Poly Unsaturated Fat",
+                        "amount": 0.84,
+                        "unit": "g"
+                    },
+                    {
+                        "name": "Carbohydrates",
+                        "amount": 0.32,
+                        "unit": "g"
+                    },
+                    {
+                        "name": "Protein",
+                        "amount": 5.53,
+                        "unit": "g"
+                    },
+                    {
+                        "name": "Vitamin A",
+                        "amount": 237.6,
+                        "unit": "IU"
+                    },
+                    {
+                        "name": "Vitamin B6",
+                        "amount": 0.07,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Vitamin B3",
+                        "amount": 0.03,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Choline",
+                        "amount": 129.27,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Vitamin K",
+                        "amount": 0.13,
+                        "unit": "µg"
+                    },
+                    {
+                        "name": "Vitamin B12",
+                        "amount": 0.39,
+                        "unit": "µg"
+                    },
+                    {
+                        "name": "Potassium",
+                        "amount": 60.72,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Vitamin C",
+                        "amount": 0,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Sugar",
+                        "amount": 0.16,
+                        "unit": "g"
+                    },
+                    {
+                        "name": "Phosphorus",
+                        "amount": 87.12,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Trans Fat",
+                        "amount": 0.02,
+                        "unit": "g"
+                    }
+                ]
+            },
+            {
+                "name": "ice",
+                "amount": 1,
+                "unit": "servings",
+                "nutrients": [
+                    {
+                        "name": "Fiber",
+                        "amount": 0,
+                        "unit": "g"
+                    },
+                    {
+                        "name": "Fluoride",
+                        "amount": 14.45,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Fat",
+                        "amount": 0,
+                        "unit": "g"
+                    },
+                    {
+                        "name": "Magnesium",
+                        "amount": 0.56,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Zinc",
+                        "amount": 0.01,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Carbohydrates",
+                        "amount": 0,
+                        "unit": "g"
+                    },
+                    {
+                        "name": "Calcium",
+                        "amount": 1.68,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Iron",
+                        "amount": 0,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Protein",
+                        "amount": 0,
+                        "unit": "g"
+                    },
+                    {
+                        "name": "Sodium",
+                        "amount": 2.8,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Potassium",
+                        "amount": 0,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Calories",
+                        "amount": 0,
+                        "unit": "cal"
+                    },
+                    {
+                        "name": "Copper",
+                        "amount": 0.01,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Phosphorus",
+                        "amount": 0,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Manganese",
+                        "amount": 0,
+                        "unit": "mg"
+                    }
+                ]
+            },
+            {
+                "name": "water",
+                "amount": 0.08,
+                "unit": "cup",
+                "nutrients": [
+                    {
+                        "name": "Fiber",
+                        "amount": 0,
+                        "unit": "g"
+                    },
+                    {
+                        "name": "Fluoride",
+                        "amount": 5.38,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Fat",
+                        "amount": 0,
+                        "unit": "g"
+                    },
+                    {
+                        "name": "Magnesium",
+                        "amount": 0.21,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Zinc",
+                        "amount": 0,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Carbohydrates",
+                        "amount": 0,
+                        "unit": "g"
+                    },
+                    {
+                        "name": "Calcium",
+                        "amount": 0.63,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Iron",
+                        "amount": 0,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Protein",
+                        "amount": 0,
+                        "unit": "g"
+                    },
+                    {
+                        "name": "Sodium",
+                        "amount": 1.04,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Potassium",
+                        "amount": 0,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Calories",
+                        "amount": 0,
+                        "unit": "cal"
+                    },
+                    {
+                        "name": "Copper",
+                        "amount": 0,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Phosphorus",
+                        "amount": 0,
+                        "unit": "mg"
+                    },
+                    {
+                        "name": "Manganese",
+                        "amount": 0,
+                        "unit": "mg"
+                    }
+                ]
+            }
+        ],
+        "caloricBreakdown": {
+            "percentProtein": 36.22,
+            "percentFat": 61.7,
+            "percentCarbs": 2.08
+        }
+    },
+    "cuisines": [],
+    "dishTypes": [
+        "side dish"
+    ],
+    "diets": [
+        "gluten free",
+        "dairy free",
+        "paleolithic",
+        "lacto ovo vegetarian",
+        "primal",
+        "fodmap friendly",
+        "whole 30"
+    ],
+    "occasions": [],
+    "winePairing": {},
+    "instructions": "Instructions\n\n\n\nPlace trivet at the bottom of the inner Instant Pot pan.\n\n\nPlace eggs on top of trivet, stacking evenly if necessary.\n\n\nAdd one cup of water to the pan. Close the lid and set Instant Pot for 5 minutes at HIGH pressure.\n\n\nAllow pot to release the pressure naturally for 5 minutes, then very carefully quick release any remaining steam.\n\n\nScoop eggs out of pot and place in an ice bath for 5 minutes.\n\n\nRemove from the ice bath and peel or store in the refrigerator until ready to use.",
+    "analyzedInstructions": [
+        {
+            "name": "",
+            "steps": [
+                {
+                    "number": 1,
+                    "step": "Place trivet at the bottom of the inner Instant Pot pan.",
+                    "ingredients": [],
+                    "equipment": [
+                        {
+                            "id": 414093,
+                            "name": "instant pot",
+                            "image": ""
+                        },
+                        {
+                            "id": 404645,
+                            "name": "frying pan",
+                            "image": "pan.png"
+                        }
+                    ]
+                },
+                {
+                    "number": 2,
+                    "step": "Place eggs on top of trivet, stacking evenly if necessary.",
+                    "ingredients": [
+                        {
+                            "id": 1123,
+                            "name": "egg",
+                            "image": "egg.jpg"
+                        }
+                    ],
+                    "equipment": []
+                },
+                {
+                    "number": 3,
+                    "step": "Add one cup of water to the pan. Close the lid and set Instant Pot for 5 minutes at HIGH pressure.",
+                    "ingredients": [
+                        {
+                            "id": 14412,
+                            "name": "water",
+                            "image": "water.png"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 414093,
+                            "name": "instant pot",
+                            "image": ""
+                        },
+                        {
+                            "id": 404645,
+                            "name": "frying pan",
+                            "image": "pan.png"
+                        }
+                    ],
+                    "length": {
+                        "number": 5,
+                        "unit": "minutes"
+                    }
+                },
+                {
+                    "number": 4,
+                    "step": "Allow pot to release the pressure naturally for 5 minutes, then very carefully quick release any remaining steam.",
+                    "ingredients": [],
+                    "equipment": [
+                        {
+                            "id": 404752,
+                            "name": "pot",
+                            "image": "stock-pot.jpg"
+                        }
+                    ],
+                    "length": {
+                        "number": 5,
+                        "unit": "minutes"
+                    }
+                },
+                {
+                    "number": 5,
+                    "step": "Scoop eggs out of pot and place in an ice bath for 5 minutes.",
+                    "ingredients": [
+                        {
+                            "id": 1123,
+                            "name": "egg",
+                            "image": "egg.jpg"
+                        },
+                        {
+                            "id": 10014412,
+                            "name": "ice",
+                            "image": "ice-cubes.jpg"
+                        }
+                    ],
+                    "equipment": [
+                        {
+                            "id": 404752,
+                            "name": "pot",
+                            "image": "stock-pot.jpg"
+                        }
+                    ],
+                    "length": {
+                        "number": 5,
+                        "unit": "minutes"
+                    }
+                },
+                {
+                    "number": 6,
+                    "step": "Remove from the ice bath and peel or store in the refrigerator until ready to use.",
+                    "ingredients": [
+                        {
+                            "id": 10014412,
+                            "name": "ice",
+                            "image": "ice-cubes.jpg"
+                        }
+                    ],
+                    "equipment": []
+                }
+            ]
+        }
+    ],
+    "creditsText": "Cooking with Curls"
+}

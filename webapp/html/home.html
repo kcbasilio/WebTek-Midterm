@@ -23,174 +23,156 @@
       </ul>
     </nav>
     <div class="search-recipe-content">
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+              <a id="sbi" class="nav-link active" href="#">Search By Ingredients</a>
+            </li>
+            <li class="nav-item">
+              <a id="sbn" class="nav-link" href="#">Search By Nutrients</a>
+            </li>
+          </ul>
       <div class="search-bar-box">
-        <form class="form-inline">
-          <div class="form-group mb-2">
-            <input type="text" class="form-control" id="recipe" placeholder="Calorie..">
-          </div>
-          <div class="form-group mb-2">
-            <input type="text" class="form-control" id="recipe" placeholder="Protein..">
-          </div>
-          <div class="form-group mb-2">
-            <input type="text" class="form-control" id="recipe" placeholder="Fat..">
-          </div>
-          <div class="form-group mb-2">
-            <input type="text" class="form-control" id="recipe" placeholder="Carbohydrate..">
-          </div>
-          <div class="form-group mb-2">
-            <input type="text" class="form-control" id="recipe" placeholder="Search ingredient..">
-          </div>
-          <button type="button" class="btn btn-primary mb-2" id="submit-recipe">Search</button>
-        </form>
-        <button id="showfilter" class="btn btn-primary">Show Filters</button>
-        <div>
-        <form>
-            <label>Cuisine:</label>
-            <label class="checkbox-inline">
-              <input type="checkbox" value=""> African
-            </label>
-            <label class="checkbox-inline">
-              <input type="checkbox" value=""> American
-            </label>
-            <label class="checkbox-inline">
-              <input type="checkbox" value=""> British
-            </label>
-            <label class="checkbox-inline">
-              <input type="checkbox" value=""> Option 3
-            </label>
-            <label class="checkbox-inline">
-              <input type="checkbox" value=""> Chinese
-            </label>
-            <label class="checkbox-inline">
-              <input type="checkbox" value=""> French
-            </label>
-            <label class="checkbox-inline">
-              <input type="checkbox" value=""> German
-            </label>
-            <label class="checkbox-inline">
-              <input type="checkbox" value=""> Indian
-            </label>
-            <label class="checkbox-inline">
-              <input type="checkbox" value=""> Italian
-            </label>
-            <label class="checkbox-inline">
-              <input type="checkbox" value=""> Korean
-            </label>
+        <div class="search-by-ingredients">
+          <h1 class="display-4">Search By Ingredients</h1>
+          <form class="form-inline">
+            <div class="form-group">
+              <input type="text" class="form-control" id="search-ingredient" placeholder="eg. egg or egg,salt">
+            </div>
+            <input type="button" class="btn btn-primary" id="search-recipe-ingredients" value="Search">
+          </form>
+        </div>
+        <div class="search-by-nutrients">
+          <h1 class="display-4">Search By Nutrients</h1>
+          <form>
+            <div class="row">
+              <div class="col form-group">
+                <label for="">Calorie</label>
+                <input type="text" class="form-control" id="search-min-calorie" placeholder="Min Calorie.. eg. 50">
+              </div>
+              <div class="col form-group">
+                <label for="">Protein</label>
+                <input type="text" class="form-control" id="search-min-protein" placeholder="Min Protein.. eg. 10">
+              </div>
+              <div class="col form-group">
+                <label for="">Fat</label>
+                <input type="text" class="form-control" id="search-min-fat" placeholder="Min Fat.. eg. 25">
+              </div>
+              <div class="col form-group">
+                <label for="">Carbohydrates</label>
+                <input type="text" class="form-control" id="search-min-carbs" placeholder="Min Carbs.. eg. 150">
+              </div>
+            </div>
           </form>
           <form>
-              <label>Diets:</label>
-              <label class="checkbox-inline">
-                <input type="checkbox" value=""> African
-              </label>
-              <label class="checkbox-inline">
-                <input type="checkbox" value=""> American
-              </label>
-              <label class="checkbox-inline">
-                <input type="checkbox" value=""> British
-              </label>
-              <label class="checkbox-inline">
-                <input type="checkbox" value=""> Option 3
-              </label>
-              <label class="checkbox-inline">
-                <input type="checkbox" value=""> Chinese
-              </label>
-              <label class="checkbox-inline">
-                <input type="checkbox" value=""> French
-              </label>
-              <label class="checkbox-inline">
-                <input type="checkbox" value=""> German
-              </label>
-            </form>
-            <form>
-                <label>Allergies/Intolerances:</label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" value=""> African
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" value=""> American
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" value=""> British
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" value=""> Option 3
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" value=""> Chinese
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" value=""> French
-                </label>
-              </form>
+            <div class="row">
+              <div class="col form-group">
+                <input type="text" class="form-control" id="search-max-calorie" placeholder="Max Calorie.. eg. 100">
+              </div>
+              <div class="col form-group">
+                <input type="text" class="form-control" id="search-max-protein" placeholder="Max Protein.. eg. 20">
+              </div>
+              <div class="col form-group">
+                <input type="text" class="form-control" id="search-max-fat" placeholder="Max Fat.. eg. 50">
+              </div>
+              <div class="col form-group">
+                <input type="text" class="form-control" id="search-max-carbs" placeholder="Max Carbs..eg. 250">
+              </div>
+            </div>
+          </form>
+          <input type="button" class="btn btn-primary" id="search-recipe-nutritions" value="Search">
+        </div>
+
+        <div class="filters">
+          <button id="showfilter" class="btn btn-primary">Show Filters</button>
+          <div class="filter-options">
+              <hr>
+              <form>
+                  <label>Cuisine:</label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value=""> African
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value=""> American
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value=""> British
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value=""> Option 3
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value=""> Chinese
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value=""> French
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value=""> German
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value=""> Indian
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value=""> Italian
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value=""> Korean
+                  </label>
+                </form>
+                <form>
+                    <label>Diets:</label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" value=""> African
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" value=""> American
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" value=""> British
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" value=""> Option 3
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" value=""> Chinese
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" value=""> French
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" value=""> German
+                    </label>
+                  </form>
+                  <form>
+                    <label>Allergies/Intolerances:</label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" value=""> African
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" value=""> American
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" value=""> British
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" value=""> Option 3
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" value=""> Chinese
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" value=""> French
+                    </label>
+                  </form>
+          </div>
+          
         </div>
       </div>
 
-<!--       <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown button
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </div> -->
       <div class="result">
         <h3 id="label">Search Results:</h3>
-        <button class="btn btn-primary" id="backbtn">Back to Recipe List</button>
-        <!-- <a href="">Back to All Recipe</a> -->
         <hr>
         <div class="result-box">
-          <figure class="result-subbox" data-number="one">
-            <img id="result-subbox-image1" src="" alt="" data-image="info1">
-            <h2 class="view-prompt" id="view-info1">View Recipe</h2>
-            <figcaption class="lead" id="recipe-title1"></figcaption>
-          </figure>
-          <figure class="result-subbox" data-number="two">
-            <img id="result-subbox-image2" src="" alt="" data-image="info2">
-            <h2 class="view-prompt" id="view-info2">View Recipe</h2>
-            <figcaption class="lead" id="recipe-title2"></figcaption>
-          </figure>
-          <figure class="result-subbox" data-number="three">
-            <img id="result-subbox-image3" src="" alt="" data-image="info3">
-            <h2 class="view-prompt" id="view-info3">View Recipe</h2>
-            <figcaption class="lead" id="recipe-title3"></figcaption>
-          </figure>
-          <figure class="result-subbox" data-number="four">
-            <img id="result-subbox-image4" src="" alt="" data-image="info4">
-            <h2 class="view-prompt" id="view-info4">View Recipe</h2>
-            <figcaption class="lead" id="recipe-title4"></figcaption>
-          </figure>
-          <figure class="result-subbox" data-number="five">
-            <img id="result-subbox-image5" src="" alt="" data-image="info5">
-            <h2 class="view-prompt" id="view-info5">View Recipe</h2>
-            <figcaption class="lead" id="recipe-title5"></figcaption>
-          </figure>
-          <figure class="result-subbox" data-number="six">
-            <img id="result-subbox-image6" src="" alt="" data-image="info6">
-            <h2 class="view-prompt" id="view-info6">View Recipe</h2>
-            <figcaption class="lead" id="recipe-title6"></figcaption>
-          </figure>
-          <figure class="result-subbox" data-number="seven">
-            <img id="result-subbox-image7" src="" alt="" data-image="info7">
-            <h2 class="view-prompt" id="view-info7">View Recipe</h2>
-            <figcaption class="lead" id="recipe-title7"></figcaption>
-          </figure>
-          <figure class="result-subbox" data-number="eight">
-            <img id="result-subbox-image8" src="" alt="" data-image="info8">
-            <h2 class="view-prompt" id="view-info8">View Recipe</h2>
-            <figcaption class="lead" id="recipe-title8"></figcaption>
-          </figure>
-          <figure class="result-subbox" data-number="nine">
-            <img id="result-subbox-image9" src="" alt="" data-image="info9">
-            <h2 class="view-prompt" id="view-info9">View Recipe</h2>
-            <figcaption class="lead" id="recipe-title9"></figcaption>
-          </figure>
-          <figure class="result-subbox" data-number="ten">
-            <img id="result-subbox-image10" src="" alt="" data-image="info10">
-            <h2 class="view-prompt" id="view-info10">View Info</h2>
-            <figcaption class="lead" id="recipe-title10"></figcaption>
-          </figure>
         </div>
         <div class="recipe-info" id="one">
           <h1 class="recipe-info-title" id="info-title1"></h1>
@@ -200,8 +182,8 @@
           <div class="recipe-info-content ingredients-container">
             <h4>Ingredients</h4>
             <div class="ingredients-container-list">
-              <ul>
-                <li></li>
+              <ul id="list-ingredient1" class="list-group">
+
               </ul>
             </div>
           </div>
@@ -214,78 +196,6 @@
                   <th scope="col">Quantity</th>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Energy</td>
-                    <td id="energy1"></td>
-                  </tr>
-                  <tr>
-                    <td>Fat</td>
-                    <td id="fat1"><span id="fatqu1"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Carbohydrate</td>
-                    <td id="chocdf1"><span id="chocdfqu1"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Sugar</td>
-                    <td id="sugar1"><span id="sugarqu1"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Protein</td>
-                    <td id="protein1"><span id="proteinqu1"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Cholesterol</td>
-                    <td id="cholesterol1"><span id="cholesterolqu1"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Sodium</td>
-                    <td id="sodium1"><span id="sodiumqu1"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Calcium</td>
-                    <td id="calcium1"><span id="calciumqu1"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Magnesium</td>
-                    <td id="magnesium1"><span id="magnesiumqu1"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Potassium</td>
-                    <td id="potassium1"><span id="potassiumqu1"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Iron</td>
-                    <td id="iron1"><span id="ironqu1"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Zinc</td>
-                    <td id="zinc1"><span id="zincqu1"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Phosphorus</td>
-                    <td id="phosphorus1"><span id="phosphorusqu1"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin A</td>
-                    <td id="vitA1"><span id="vitAqu1"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin B6</td>
-                    <td id="vitb61"><span id="vitbqu1"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin D</td>
-                    <td id="vitD1"><span id="vitDqu1"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin E</td>
-                    <td id="vitE1"><span id="vitEqu1"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin K</td>
-                    <td id="vitK1"><span id="vitKqu1"></span></td>
-                  </tr>
                 </tbody>
               </table>
             </div>
@@ -299,8 +209,8 @@
           <div class="recipe-info-content ingredients-container">
             <h4>Ingredients</h4>
             <div class="ingredients-container-list">
-              <ul>
-                <li></li>
+              <ul id="list-ingredient2" class="list-group list-ingredient">
+
               </ul>
             </div>
           </div>
@@ -313,78 +223,6 @@
                   <th scope="col">Quantity</th>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Energy</td>
-                    <td id="energy2"><span id="energyqu2"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Fat</td>
-                    <td id="fat2"><span id="fatqu2"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Carbohydrate</td>
-                    <td id="chocdf2"><span id="chocdfqu2"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Sugar</td>
-                    <td id="sugar2"><span id="sugarqu2"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Protein</td>
-                    <td id="protein2"><span id="proteinqu2"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Cholesterol</td>
-                    <td id="cholesterol2"><span id="cholesterolqu2"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Sodium</td>
-                    <td id="sodium2"><span id="sodiumqu2"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Calcium</td>
-                    <td id="calcium2"><span id="calciumqu2"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Magnesium</td>
-                    <td id="magnesium2"><span id="magnesiumqu2"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Potassium</td>
-                    <td id="potassium2"><span id="potassiumqu2"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Iron</td>
-                    <td id="iron2"><span id="ironqu2"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Zinc</td>
-                    <td id="zinc2"><span id="zincqu2"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Phosphorus</td>
-                    <td id="phosphorus2"><span id="phosphorusqu2"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin A</td>
-                    <td id="vitA2"><span id="vitAqu2"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin B6</td>
-                    <td id="vitb62"><span id="vitbqu2"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin D</td>
-                    <td id="vitD2"><span id="vitDqu2"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin E</td>
-                    <td id="vitE2"><span id="vitEqu2"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin K</td>
-                    <td id="vitK2"><span id="vitKqu2"></span></td>
-                  </tr>
                 </tbody>
               </table>
             </div>
@@ -398,8 +236,8 @@
           <div class="recipe-info-content ingredients-container">
             <h4>Ingredients</h4>
             <div class="ingredients-container-list">
-              <ul>
-                <li></li>
+              <ul id="list-ingredient3" class="list-group list-ingredient">
+
               </ul>
             </div>
           </div>
@@ -412,78 +250,6 @@
                   <th scope="col">Quantity</th>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Energy</td>
-                    <td id="energy3"><span id="energyqu3"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Fat</td>
-                    <td id="fat3"><span id="fatqu3"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Carbohydrate</td>
-                    <td id="chocdf3"><span id="chocdfqu3"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Sugar</td>
-                    <td id="sugar3"><span id="sugarqu3"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Protein</td>
-                    <td id="protein3"><span id="proteinqu3"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Cholesterol</td>
-                    <td id="cholesterol3"><span id="cholesterolqu3"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Sodium</td>
-                    <td id="sodium3"><span id="sodiumqu3"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Calcium</td>
-                    <td id="calcium3"><span id="calciumqu3"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Magnesium</td>
-                    <td id="magnesium3"><span id="magnesiumqu3"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Potassium</td>
-                    <td id="potassium3"><span id="potassiumqu3"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Iron</td>
-                    <td id="iron3"><span id="ironqu3"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Zinc</td>
-                    <td id="zinc3"><span id="zincqu3"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Phosphorus</td>
-                    <td id="phosphorus3"><span id="phosphorusqu3"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin A</td>
-                    <td id="vitA3"><span id="vitAqu3"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin B6</td>
-                    <td id="vitb63"><span id="vitbqu3"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin D</td>
-                    <td id="vitD3"><span id="vitDqu3"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin E</td>
-                    <td id="vitE3"><span id="vitEqu3"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin K</td>
-                    <td id="vitK3"><span id="vitKqu3"></span></td>
-                  </tr>
                 </tbody>
               </table>
             </div>
@@ -497,8 +263,8 @@
           <div class="recipe-info-content ingredients-container">
             <h4>Ingredients</h4>
             <div class="ingredients-container-list">
-              <ul>
-                <li></li>
+              <ul id="list-ingredient4" class="list-group">
+
               </ul>
             </div>
           </div>
@@ -511,78 +277,6 @@
                   <th scope="col">Quantity</th>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Energy</td>
-                    <td id="energy4"><span id="energyqu4"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Fat</td>
-                    <td id="fat4"><span id="fatqu4"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Carbohydrate</td>
-                    <td id="chocdf4"><span id="chocdfqu4"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Sugar</td>
-                    <td id="sugar4"><span id="sugarqu4"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Protein</td>
-                    <td id="protein4"><span id="proteinqu4"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Cholesterol</td>
-                    <td id="cholesterol4"><span id="cholesterolqu4"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Sodium</td>
-                    <td id="sodium4"><span id="sodiumqu4"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Calcium</td>
-                    <td id="calcium4"><span id="calciumqu4"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Magnesium</td>
-                    <td id="magnesium4"><span id="magnesiumqu4"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Potassium</td>
-                    <td id="potassium4"><span id="potassiumqu4"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Iron</td>
-                    <td id="iron4"><span id="ironqu4"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Zinc</td>
-                    <td id="zinc4"><span id="zincqu4"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Phosphorus</td>
-                    <td id="phosphorus4"><span id="phosphorusqu4"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin A</td>
-                    <td id="vitA4"><span id="vitAqu4"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin B6</td>
-                    <td id="vitb64"><span id="vitbqu4"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin D</td>
-                    <td id="vitD4"><span id="vitDqu4"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin E</td>
-                    <td id="vitE4"><span id="vitEqu4"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin K</td>
-                    <td id="vitK4"><span id="vitKqu4"></span></td>
-                  </tr>
                 </tbody>
               </table>
             </div>
@@ -596,8 +290,8 @@
           <div class="recipe-info-content ingredients-container">
             <h4>Ingredients</h4>
             <div class="ingredients-container-list">
-              <ul>
-                <li></li>
+              <ul id="list-ingredient5" class="list-group">
+
               </ul>
             </div>
           </div>
@@ -610,78 +304,6 @@
                   <th scope="col">Quantity</th>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Energy</td>
-                    <td id="energy5"><span id="energyqu5"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Fat</td>
-                    <td id="fat5"><span id="fatqu5"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Carbohydrate</td>
-                    <td id="chocdf5"><span id="chocdfqu5"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Sugar</td>
-                    <td id="sugar5"><span id="sugarqu5"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Protein</td>
-                    <td id="protein5"><span id="proteinqu5"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Cholesterol</td>
-                    <td id="cholesterol5"><span id="cholesterolqu5"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Sodium</td>
-                    <td id="sodium5"><span id="sodiumqu5"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Calcium</td>
-                    <td id="calcium5"><span id="calciumqu5"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Magnesium</td>
-                    <td id="magnesium5"><span id="magnesiumqu5"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Potassium</td>
-                    <td id="potassium5"><span id="potassiumqu5"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Iron</td>
-                    <td id="iron5"><span id="ironqu5"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Zinc</td>
-                    <td id="zinc5"><span id="zincqu5"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Phosphorus</td>
-                    <td id="phosphorus5"><span id="phosphorusqu5"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin A</td>
-                    <td id="vitA5"><span id="vitAqu5"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin B6</td>
-                    <td id="vitb65"><span id="vitbqu5"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin D</td>
-                    <td id="vitD5"><span id="vitDqu5"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin E</td>
-                    <td id="vitE5"><span id="vitEqu5"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin K</td>
-                    <td id="vitK5"><span id="vitKqu5"></span></td>
-                  </tr>
                 </tbody>
               </table>
             </div>
@@ -695,8 +317,8 @@
           <div class="recipe-info-content ingredients-container">
             <h4>Ingredients</h4>
             <div class="ingredients-container-list">
-              <ul>
-                <li></li>
+              <ul id="list-ingredient6" class="list-group">
+
               </ul>
             </div>
           </div>
@@ -709,78 +331,6 @@
                   <th scope="col">Quantity</th>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Energy</td>
-                    <td id="energy6"><span id="energyqu6"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Fat</td>
-                    <td id="fat6"><span id="fatqu6"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Carbohydrate</td>
-                    <td id="chocdf6"><span id="chocdfqu6"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Sugar</td>
-                    <td id="sugar6"><span id="sugarqu6"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Protein</td>
-                    <td id="protein6"><span id="proteinqu6"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Cholesterol</td>
-                    <td id="cholesterol6"><span id="cholesterolqu6"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Sodium</td>
-                    <td id="sodium6"><span id="sodiumqu6"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Calcium</td>
-                    <td id="calcium6"><span id="calciumqu6"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Magnesium</td>
-                    <td id="magnesium6"><span id="magnesiumqu6"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Potassium</td>
-                    <td id="potassium6"><span id="potassiumqu6"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Iron</td>
-                    <td id="iron6"><span id="ironqu6"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Zinc</td>
-                    <td id="zinc6"><span id="zincqu6"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Phosphorus</td>
-                    <td id="phosphorus6"><span id="phosphorusqu6"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin A</td>
-                    <td id="vitA6"><span id="vitAqu6"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin B6</td>
-                    <td id="vitb66"><span id="vitbqu6"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin D</td>
-                    <td id="vitD6"><span id="vitDqu6"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin E</td>
-                    <td id="vitE6"><span id="vitEqu6"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin K</td>
-                    <td id="vitK6"><span id="vitKqu6"></span></td>
-                  </tr>
                 </tbody>
               </table>
             </div>
@@ -794,8 +344,8 @@
           <div class="recipe-info-content ingredients-container">
             <h4>Ingredients</h4>
             <div class="ingredients-container-list">
-              <ul>
-                <li></li>
+              <ul id="list-ingredient7" class="list-group">
+
               </ul>
             </div>
           </div>
@@ -808,78 +358,6 @@
                   <th scope="col">Quantity</th>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Energy</td>
-                    <td id="energy7"><span id="energyqu7"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Fat</td>
-                    <td id="fat7"><span id="fatqu7"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Carbohydrate</td>
-                    <td id="chocdf7"><span id="chocdfqu7"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Sugar</td>
-                    <td id="sugar7"><span id="sugarqu7"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Protein</td>
-                    <td id="protein7"><span id="proteinqu7"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Cholesterol</td>
-                    <td id="cholesterol7"><span id="cholesterolqu7"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Sodium</td>
-                    <td id="sodium7"><span id="sodiumqu7"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Calcium</td>
-                    <td id="calcium7"><span id="calciumqu7"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Magnesium</td>
-                    <td id="magnesium7"><span id="magnesiumqu7"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Potassium</td>
-                    <td id="potassium7"><span id="potassiumqu7"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Iron</td>
-                    <td id="iron7"><span id="ironqu7"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Zinc</td>
-                    <td id="zinc7"><span id="zincqu7"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Phosphorus</td>
-                    <td id="phosphorus7"><span id="phosphorusqu7"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin A</td>
-                    <td id="vitA7"><span id="vitAqu7"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin B6</td>
-                    <td id="vitb67"><span id="vitbqu7"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin D</td>
-                    <td id="vitD7"><span id="vitDqu7"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin E</td>
-                    <td id="vitE7"><span id="vitEqu7"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin K</td>
-                    <td id="vitK7"><span id="vitKqu7"></span></td>
-                  </tr>
                 </tbody>
               </table>
             </div>
@@ -893,8 +371,8 @@
           <div class="recipe-info-content ingredients-container">
             <h4>Ingredients</h4>
             <div class="ingredients-container-list">
-              <ul>
-                <li></li>
+              <ul id="list-ingredient8" class="list-group">
+
               </ul>
             </div>
           </div>
@@ -907,78 +385,6 @@
                   <th scope="col">Quantity</th>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Energy</td>
-                    <td id="energy8"><span id="energyqu8"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Fat</td>
-                    <td id="fat8"><span id="fatqu8"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Carbohydrate</td>
-                    <td id="chocdf8"><span id="chocdfqu8"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Sugar</td>
-                    <td id="sugar8"><span id="sugarqu8"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Protein</td>
-                    <td id="protein8"><span id="proteinqu8"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Cholesterol</td>
-                    <td id="cholesterol8"><span id="cholesterolqu8"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Sodium</td>
-                    <td id="sodium8"><span id="sodiumqu8"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Calcium</td>
-                    <td id="calcium8"><span id="calciumqu8"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Magnesium</td>
-                    <td id="magnesium8"><span id="magnesiumqu8"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Potassium</td>
-                    <td id="potassium8"><span id="potassiumqu8"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Iron</td>
-                    <td id="iron8"><span id="ironqu8"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Zinc</td>
-                    <td id="zinc8"><span id="zincqu8"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Phosphorus</td>
-                    <td id="phosphorus8"><span id="phosphorusqu8"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin A</td>
-                    <td id="vitA8"><span id="vitAqu8"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin B6</td>
-                    <td id="vitb68"><span id="vitbqu8"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin D</td>
-                    <td id="vitD8"><span id="vitDqu8"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin E</td>
-                    <td id="vitE8"><span id="vitEqu8"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin K</td>
-                    <td id="vitK8"><span id="vitKqu8"></span></td>
-                  </tr>
                 </tbody>
               </table>
             </div>
@@ -992,8 +398,8 @@
           <div class="recipe-info-content ingredients-container">
             <h4>Ingredients</h4>
             <div class="ingredients-container-list">
-              <ul>
-                <li></li>
+              <ul id="list-ingredient9" class="list-group">
+
               </ul>
             </div>
           </div>
@@ -1006,78 +412,6 @@
                   <th scope="col">Quantity</th>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Energy</td>
-                    <td id="energy9"><span id="energyqu9"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Fat</td>
-                    <td id="fat9"><span id="fatqu9"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Carbohydrate</td>
-                    <td id="chocdf9"><span id="chocdfqu9"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Sugar</td>
-                    <td id="sugar9"><span id="sugarqu9"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Protein</td>
-                    <td id="protein9"><span id="proteinqu9"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Cholesterol</td>
-                    <td id="cholesterol9"><span id="cholesterolqu9"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Sodium</td>
-                    <td id="sodium9"><span id="sodiumqu9"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Calcium</td>
-                    <td id="calcium9"><span id="calciumqu9"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Magnesium</td>
-                    <td id="magnesium9"><span id="magnesiumqu9"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Potassium</td>
-                    <td id="potassium9"><span id="potassiumqu9"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Iron</td>
-                    <td id="iron9"><span id="ironqu9"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Zinc</td>
-                    <td id="zinc9"><span id="zincqu9"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Phosphorus</td>
-                    <td id="phosphorus9"><span id="phosphorusqu9"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin A</td>
-                    <td id="vitA9"><span id="vitAqu9"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin B6</td>
-                    <td id="vitb69"><span id="vitbqu9"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin D</td>
-                    <td id="vitD9"><span id="vitDqu1"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin E</td>
-                    <td id="vitE9"><span id="vitEqu9"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin K</td>
-                    <td id="vitK9"><span id="vitKqu9"></span></td>
-                  </tr>
                 </tbody>
               </table>
             </div>
@@ -1091,8 +425,8 @@
           <div class="recipe-info-content ingredients-container">
             <h4>Ingredients</h4>
             <div class="ingredients-container-list">
-              <ul>
-                <li></li>
+              <ul id="list-ingredient10" class="list-group">
+
               </ul>
             </div>
           </div>
@@ -1105,78 +439,6 @@
                   <th scope="col">Quantity</th>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Energy</td>
-                    <td id="energy10"><span id="energyqu10"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Fat</td>
-                    <td id="fat10"><span id="fatqu10"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Carbohydrate</td>
-                    <td id="chocdf10"><span id="chocdfqu10"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Sugar</td>
-                    <td id="sugar10"><span id="sugarqu10"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Protein</td>
-                    <td id="protein10"><span id="proteinqu10"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Cholesterol</td>
-                    <td id="cholesterol10"><span id="cholesterolqu10"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Sodium</td>
-                    <td id="sodium10"><span id="sodiumqu10"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Calcium</td>
-                    <td id="calcium10"><span id="calciumqu10"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Magnesium</td>
-                    <td id="magnesium10"><span id="magnesiumqu10"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Potassium</td>
-                    <td id="potassium10"><span id="potassiumqu10"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Iron</td>
-                    <td id="iron10"><span id="ironqu10"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Zinc</td>
-                    <td id="zinc10"><span id="zincqu10"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Phosphorus</td>
-                    <td id="phosphorus10"><span id="phosphorusqu10"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin A</td>
-                    <td id="vitA10"><span id="vitAqu10"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin B6</td>
-                    <td id="vitb610"><span id="vitbqu10"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin D</td>
-                    <td id="vitD10"><span id="vitDqu10"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin E</td>
-                    <td id="vitE10"><span id="vitEqu10"></span></td>
-                  </tr>
-                  <tr>
-                    <td>Vitamin K</td>
-                    <td id="vitK10"><span id="vitKqu10"></span></td>
-                  </tr>
                 </tbody>
               </table>
             </div>
@@ -1191,7 +453,7 @@
   <script type="text/javascript" src="../js/main.js"></script>
   <script type="text/javascript">
     $(document).ready(function () {
-      $(".recipe-info,.view-prompt").hide();
+      $(".view-prompt, .search-by-nutrients, .filter-options").hide();
       $(".result-subbox").click(function() {
         $(".result-box").fadeOut(500);
         var boxNumber = $(this).attr("data-number");
@@ -1205,6 +467,24 @@
       $("img").hover(function() {
         var view = $(this).attr("data-image");
         $("#view-" + view).fadeToggle(200);
+      })
+
+      $("#sbn").click(function() {
+        $(this).addClass('active');
+        $("#sbi").removeClass('active');
+        $(".search-by-ingredients").slideUp(200);
+        $(".search-by-nutrients").slideDown(200);
+      })
+
+      $("#sbi").click(function() {
+        $(this).addClass('active');
+        $("#sbn").removeClass('active');
+        $(".search-by-nutrients").slideUp(200);
+        $(".search-by-ingredients").slideDown(200);
+      })
+
+      $("#showfilter").click(function() {
+        $(".filter-options").slideToggle(200);
       })
     });
   </script>
