@@ -206,3 +206,29 @@ $(document).ready(function() {
 	app.start = document.getElementById('search-recipe-nutritions').addEventListener("click", app.searchRecipeByNutrients);
 
 });
+
+
+/*Temp code for filtering*/
+//cuisine
+var index;
+var cuisine="";
+for(index=0; index<$('.cuisine').length; index++){
+    if($('.cuisine')[index].checked){
+        cuisine = $('.cuisine')[index].value + "," + cuisine;
+    }
+}
+//diet
+var diet="";
+for(index=0; index<$('.diet').length; index++){
+    if($('.diet')[index].checked){
+        diet = $('.diet')[index].value + "," + diet;
+    }
+}
+
+//intolerances
+var intolerance="";
+for(index=0; index<$('.intolerance').length; index++){
+    if($('.intolerance')[index].checked){
+        intolerance = $('.intolerance')[index].value + "," + intolerance;
+    }
+}
