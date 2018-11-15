@@ -8,13 +8,14 @@
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/master.css">
   <link rel="stylesheet" href="../css/home.css">
-
 <!--   <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script> -->
   <title>WikiCook</title>
 </head>
 <body>
+  <!-- WRAPPER -->
   <div class="wrapper">
+    <!-- NAVIGATION BAR -->
     <nav>
       <ul>
         <li id="navlogo"><a href="../index.html">WikiCook</a></li>
@@ -22,43 +23,33 @@
         <li><a href="about.html">About Us</a></li>
       </ul>
     </nav>
+    <!-- CONTENT -->
     <div class="search-recipe-content">
-        <ul class="nav nav-pills nav-fill">
-            <li class="nav-item">
-              <a id="sbi" class="nav-link active" href="#">Search By Ingredients</a>
-            </li>
-            <li class="nav-item">
-              <a id="sbn" class="nav-link" href="#">Search By Nutrients</a>
-            </li>
-          </ul>
       <div class="search-bar-box">
         <div class="search-by-ingredients">
-          <h1 class="display-4">Search By Ingredients</h1>
           <form class="form-inline">
             <div class="form-group">
+              <label for="search-ingredient" class="lead"><b>Search ingredient:&nbsp;</b></label><br>
               <input type="text" class="form-control" id="search-ingredient" placeholder="eg. egg or egg,salt">
             </div>
-            <input type="button" class="btn btn-primary" id="search-recipe-ingredients" value="Search">
           </form>
-        </div>
-        <div class="search-by-nutrients">
-          <h1 class="display-4">Search By Nutrients</h1>
           <form>
+            <hr>
             <div class="row">
               <div class="col form-group">
-                <label for="">Calorie</label>
+                <label for="" class="lead"><b>Calorie</b></label>
                 <input type="text" class="form-control" id="search-min-calorie" placeholder="Min Calorie.. eg. 50">
               </div>
               <div class="col form-group">
-                <label for="">Protein</label>
+                <label for="" class="lead"><b>Protein</b></label>
                 <input type="text" class="form-control" id="search-min-protein" placeholder="Min Protein.. eg. 10">
               </div>
               <div class="col form-group">
-                <label for="">Fat</label>
+                <label for="" class="lead"><b>Fat</b></label>
                 <input type="text" class="form-control" id="search-min-fat" placeholder="Min Fat.. eg. 25">
               </div>
               <div class="col form-group">
-                <label for="">Carbohydrates</label>
+                <label for="" class="lead"><b>Carbohydrates</b></label>
                 <input type="text" class="form-control" id="search-min-carbs" placeholder="Min Carbs.. eg. 150">
               </div>
             </div>
@@ -79,7 +70,6 @@
               </div>
             </div>
           </form>
-          <input type="button" class="btn btn-primary" id="search-recipe-nutritions" value="Search">
         </div>
 
         <div class="filters">
@@ -87,461 +77,101 @@
           <div class="filter-options">
               <hr>
               <form>
-                  <label>Cuisine:</label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" class="cuisine" value="african"> African
+                  <label class="lead"><b>Cuisine:</b></label>
+                  <label class="checkbox-inline lead">
+                    <input class="cuisine" type="checkbox" value="african"> African
                   </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" class="cuisine" value="american"> American
+                  <label class="checkbox-inline lead">
+                    <input class="cuisine" type="checkbox" value="american"> American
                   </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" class="cuisine" value="british"> British
+                  <label class="checkbox-inline lead">
+                    <input class="cuisine" type="checkbox" value="british"> British
                   </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" class="cuisine" value="cajun"> Cajun
+                  <label class="checkbox-inline lead">
+                    <input class="cuisine" type="checkbox" value="chinese"> Chinese
                   </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" class="cuisine" value="carribean"> Carribean
+                  <label class="checkbox-inline lead">
+                    <input class="cuisine" type="checkbox" value="french"> French
                   </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" class="cuisine" value="chinese"> Chinese
+                  <label class="checkbox-inline lead">
+                    <input class="cuisine" type="checkbox" value="german"> German
                   </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" class="cuisine" value="eastern european"> Eastern European
+                  <label class="checkbox-inline lead">
+                    <input class="cuisine" type="checkbox" value="indian"> Indian
                   </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" class="cuisine" value="french"> French
+                  <label class="checkbox-inline lead">
+                    <input class="cuisine" type="checkbox" value="italian"> Italian
                   </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" class="cuisine" value="german"> German
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" class="cuisine" value="greek"> Greek
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" class="cuisine" value="indian"> Indian
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" class="cuisine" value="irish"> Irish
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" class="cuisine" value="italian"> Italian
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" class="cuisine" value="japanese"> Japanese
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" class="cuisine" value="jewish"> Jewish
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" class="cuisine" value="korean"> Korean
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" class="cuisine" value="latin american"> Latin American
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" class="cuisine" value="mexican"> Mexican
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" class="cuisine" value="middle eastern"> Middle Eastern
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" class="cuisine" value="nordic"> Nordic
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" class="cuisine" value="southern"> Southern
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" class="cuisine" value="spanish"> Spanish
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" class="cuisine" value="thai"> Thai
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" class="cuisine" value="vietnamese"> Vietnamese
+                  <label class="checkbox-inline lead">
+                    <input class="cuisine" type="checkbox" value="korean"> Korean
                   </label>
                 </form>
                 <form>
-                    <label>Diets:</label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" class="diet" value="lacto vegetarian">Lacto Vegetarian
+                    <label class="lead"><b>Diets:</b></label>
+                    <label class="checkbox-inline lead">
+                      <input class="diet" type="radio" name="intolerances" value="pescetarian"> Pescetarian
                     </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" class="diet" value="ovo vegetarian">Ovo Vegetarian
+                    <label class="checkbox-inline lead"> 
+                      <input class="diet" type="radio" name="intolerances" value="lacto%20vegetarian"> Lacto Vegetarian
                     </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" class="diet" value="paleo"> Paleo
+                    <label class="checkbox-inline lead">
+                      <input class="diet" type="radio" name="intolerances" value="ovo%20vegetarian"> Ovo Vegetarian
                     </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" class="diet" value="pescetarian"> Pescetarian
+                    <label class="checkbox-inline lead">
+                      <input class="diet" type="radio" name="intolerances" value="vegan"> Vegan
                     </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" class="diet" value="primal"> Primal
+                    <label class="checkbox-inline lead">
+                      <input class="diet" type="radio" name="intolerances" value="paleo"> Paleo
                     </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" class="diet" value="vegan"> Vegan
+                    <label class="checkbox-inline lead">
+                      <input class="diet" type="radio" name="intolerances" value="primal"> Primal
+                    </label>
+                    <label class="checkbox-inline lead">
+                      <input class="diet" type="radio" name="intolerances" value="vegetarian"> Vegetarian
                     </label>
                   </form>
                   <form>
-                    <label>Allergies/Intolerances:</label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" class="intolerance" value="dairy"> Dairy Free
+                    <label class="lead"><b>Allergies/Intolerances:</b></label>
+                    <label class="checkbox-inline lead">
+                      <input class="intolerances" type="checkbox" value="peanut"> Peanut
                     </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" class="intolerance" value="egg"> Egg Free
+                    <label class="checkbox-inline lead">
+                      <input class="intolerances" type="checkbox" value="gluten"> Gluten
                     </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" class="intolerance" value="gluten"> Gluten Free
+                    <label class="checkbox-inline lead">
+                      <input class="intolerances" type="checkbox" value="dairy"> Dairy
                     </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" class="intolerance" value="peanut"> Peanut Free
+                    <label class="checkbox-inline lead">
+                      <input class="intolerances" type="checkbox" value="tree%20nut"> Tree nut
                     </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" class="intolerance" value="seafood"> Seafood Free
+                    <label class="checkbox-inline lead">
+                      <input class="intolerances" type="checkbox" value="egg"> Egg
                     </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" class="intolerance" value="sesame"> Sesame Free
-                    </label>
-                      <label class="checkbox-inline">
-                      <input type="checkbox" class="intolerance" value="shellfish"> Shellfish Free
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" class="intolerance" value="soy"> Soy Free
-                    </label>
-                      <label class="checkbox-inline">
-                      <input type="checkbox" class="intolerance" value="sulfite"> Sulfite Free
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" class="intolerance" value="tree nut"> Tree Nut Free
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" class="intolerance"value="wheat"> Wheat Free
+                    <label class="checkbox-inline lead">
+                      <input class="intolerances" type="checkbox" value="sesame"> Sesame
                     </label>
                   </form>
           </div>
-          
+        <button id="search-recipe-ingredients" class="btn btn-primary">Search!</button>
         </div>
       </div>
 
       <div class="result">
         <h3 id="label">Search Results:</h3>
-        <hr>
         <div class="result-box">
-        </div>
-        <div class="recipe-info" id="one">
-          <h1 class="recipe-info-title" id="info-title1"></h1>
-          <div class="recipe-info-content image-container">
-            <img class="image-container-box" id="image-container1" src="" alt="">
-          </div>
-          <div class="recipe-info-content ingredients-container">
-            <h4>Ingredients</h4>
-            <div class="ingredients-container-list">
-              <ul id="list-ingredient1" class="list-group">
-
-              </ul>
-            </div>
-          </div>
-          <div class="recipe-info-content nutritionfacts-container">
-            <h4>Nutrition Facts</h4>
-            <div class="nutritionfacts-container-table">
-              <table class="table table-striped">
-                <thead>
-                  <th scope="col">Label</th>
-                  <th scope="col">Quantity</th>
-                </thead>
-                <tbody>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="recipe-info" id="two">
-          <h1 class="recipe-info-title" id="info-title2"></h1>
-          <div class="recipe-info-content image-container">
-            <img class="image-container-box" id="image-container2" src="">
-          </div>
-          <div class="recipe-info-content ingredients-container">
-            <h4>Ingredients</h4>
-            <div class="ingredients-container-list">
-              <ul id="list-ingredient2" class="list-group list-ingredient">
-
-              </ul>
-            </div>
-          </div>
-          <div class="recipe-info-content nutritionfacts-container">
-            <h4>Nutrition Facts</h4>
-            <div class="nutritionfacts-container-table">
-              <table class="table table-striped">
-                <thead>
-                  <th scope="col">Label</th>
-                  <th scope="col">Quantity</th>
-                </thead>
-                <tbody>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="recipe-info" id="three">
-          <h1 class="recipe-info-title" id="info-title3"></h1>
-          <div class="recipe-info-content image-container">
-            <img class="image-container-box" id="image-container3" src="">
-          </div>
-          <div class="recipe-info-content ingredients-container">
-            <h4>Ingredients</h4>
-            <div class="ingredients-container-list">
-              <ul id="list-ingredient3" class="list-group list-ingredient">
-
-              </ul>
-            </div>
-          </div>
-          <div class="recipe-info-content nutritionfacts-container">
-            <h4>Nutrition Facts</h4>
-            <div class="nutritionfacts-container-table">
-              <table class="table table-striped">
-                <thead>
-                  <th scope="col">Label</th>
-                  <th scope="col">Quantity</th>
-                </thead>
-                <tbody>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="recipe-info" id="four">
-          <h1 class="recipe-info-title" id="info-title4"></h1>
-          <div class="recipe-info-content image-container">
-            <img class="image-container-box" id="image-container4" src="">
-          </div>
-          <div class="recipe-info-content ingredients-container">
-            <h4>Ingredients</h4>
-            <div class="ingredients-container-list">
-              <ul id="list-ingredient4" class="list-group">
-
-              </ul>
-            </div>
-          </div>
-          <div class="recipe-info-content nutritionfacts-container">
-            <h4>Nutrition Facts</h4>
-            <div class="nutritionfacts-container-table">
-              <table class="table table-striped">
-                <thead>
-                  <th scope="col">Label</th>
-                  <th scope="col">Quantity</th>
-                </thead>
-                <tbody>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="recipe-info" id="five">
-          <h1 class="recipe-info-title" id="info-title5"></h1>
-          <div class="recipe-info-content image-container">
-            <img class="image-container-box" id="image-container5" src="">
-          </div>
-          <div class="recipe-info-content ingredients-container">
-            <h4>Ingredients</h4>
-            <div class="ingredients-container-list">
-              <ul id="list-ingredient5" class="list-group">
-
-              </ul>
-            </div>
-          </div>
-          <div class="recipe-info-content nutritionfacts-container">
-            <h4>Nutrition Facts</h4>
-            <div class="nutritionfacts-container-table">
-              <table class="table table-striped">
-                <thead>
-                  <th scope="col">Label</th>
-                  <th scope="col">Quantity</th>
-                </thead>
-                <tbody>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="recipe-info" id="six">
-          <h1 class="recipe-info-title" id="info-title6"></h1>
-          <div class="recipe-info-content image-container">
-            <img class="image-container-box" id="image-container6" src="">
-          </div>
-          <div class="recipe-info-content ingredients-container">
-            <h4>Ingredients</h4>
-            <div class="ingredients-container-list">
-              <ul id="list-ingredient6" class="list-group">
-
-              </ul>
-            </div>
-          </div>
-          <div class="recipe-info-content nutritionfacts-container">
-            <h4>Nutrition Facts</h4>
-            <div class="nutritionfacts-container-table">
-              <table class="table table-striped">
-                <thead>
-                  <th scope="col">Label</th>
-                  <th scope="col">Quantity</th>
-                </thead>
-                <tbody>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="recipe-info" id="seven">
-          <h1 class="recipe-info-title" id="info-title7"></h1>
-          <div class="recipe-info-content image-container">
-            <img class="image-container-box" id="image-container7" src="">
-          </div>
-          <div class="recipe-info-content ingredients-container">
-            <h4>Ingredients</h4>
-            <div class="ingredients-container-list">
-              <ul id="list-ingredient7" class="list-group">
-
-              </ul>
-            </div>
-          </div>
-          <div class="recipe-info-content nutritionfacts-container">
-            <h4>Nutrition Facts</h4>
-            <div class="nutritionfacts-container-table">
-              <table class="table table-striped">
-                <thead>
-                  <th scope="col">Label</th>
-                  <th scope="col">Quantity</th>
-                </thead>
-                <tbody>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="recipe-info" id="eight">
-          <h1 class="recipe-info-title" id="info-title8"></h1>
-          <div class="recipe-info-content image-container">
-            <img class="image-container-box" id="image-container8" src="">
-          </div>
-          <div class="recipe-info-content ingredients-container">
-            <h4>Ingredients</h4>
-            <div class="ingredients-container-list">
-              <ul id="list-ingredient8" class="list-group">
-
-              </ul>
-            </div>
-          </div>
-          <div class="recipe-info-content nutritionfacts-container">
-            <h4>Nutrition Facts</h4>
-            <div class="nutritionfacts-container-t7ble">
-              <table class="table table-striped">
-                <thead>
-                  <th scope="col">Label</th>
-                  <th scope="col">Quantity</th>
-                </thead>
-                <tbody>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="recipe-info" id="nine">
-          <h1 class="recipe-info-title" id="info-title9"></h1>
-          <div class="recipe-info-content image-container">
-            <img class="image-container-box" id="image-container9" src="">
-          </div>
-          <div class="recipe-info-content ingredients-container">
-            <h4>Ingredients</h4>
-            <div class="ingredients-container-list">
-              <ul id="list-ingredient9" class="list-group">
-
-              </ul>
-            </div>
-          </div>
-          <div class="recipe-info-content nutritionfacts-container">
-            <h4>Nutrition Facts</h4>
-            <div class="nutritionfacts-container-table">
-              <table class="table table-striped">
-                <thead>
-                  <th scope="col">Label</th>
-                  <th scope="col">Quantity</th>
-                </thead>
-                <tbody>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="recipe-info" id="ten">
-          <h1 class="recipe-info-title" id="info-title10"></h1>
-          <div class="recipe-info-content image-container">
-            <img class="image-container-box" id="image-container10" src="">
-          </div>
-          <div class="recipe-info-content ingredients-container">
-            <h4>Ingredients</h4>
-            <div class="ingredients-container-list">
-              <ul id="list-ingredient10" class="list-group">
-
-              </ul>
-            </div>
-          </div>
-          <div class="recipe-info-content nutritionfacts-container">
-            <h4>Nutrition Facts</h4>
-            <div class="nutritionfacts-container-table">
-              <table class="table table-striped">
-                <thead>
-                  <th scope="col">Label</th>
-                  <th scope="col">Quantity</th>
-                </thead>
-                <tbody>
-                </tbody>
-              </table>
-            </div>
-          </div>
         </div>
       </div>
     </div>
+
+    <!-- FOOTER -->
+    <footer class="container">
+
+    </footer>
   </div>
   <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="../js/popper.min.js"></script>
   <script type="text/javascript" src="../js/bootstrap.min.js"></script>
   <script type="text/javascript" src="../js/main.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $(".view-prompt, .search-by-nutrients, .filter-options").hide();
-      $(".result-subbox").click(function() {
-        $(".result-box").fadeOut(500);
-        var boxNumber = $(this).attr("data-number");
-        console.log(boxNumber);
-        $("#" + boxNumber).fadeIn(1000);
-      });
-      $("#backbtn").click(function() {
-        $(".recipe-info").hide(500);
-        $(".result-box").fadeIn(1000);
-      })
-      $("img").hover(function() {
-        var view = $(this).attr("data-image");
-        $("#view-" + view).fadeToggle(200);
-      })
-
-      $("#sbn").click(function() {
-        $(this).addClass('active');
-        $("#sbi").removeClass('active');
-        $(".search-by-ingredients").slideUp(200);
-        $(".search-by-nutrients").slideDown(200);
-      })
-
-      $("#sbi").click(function() {
-        $(this).addClass('active');
-        $("#sbn").removeClass('active');
-        $(".search-by-nutrients").slideUp(200);
-        $(".search-by-ingredients").slideDown(200);
-      })
-
-      $("#showfilter").click(function() {
-        $(".filter-options").slideToggle(200);
-      })
-    });
-  </script>
 </body>
 
 </html>
