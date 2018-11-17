@@ -7,29 +7,28 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/master.css">
-  <link rel="stylesheet" href="../css/home.css">
-<!--   <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script> -->
+  <link rel="stylesheet" href="../css/search.css">
   <title>WikiCook</title>
 </head>
 <body>
   <!-- WRAPPER -->
-  <div class="wrapper">
+  <div class="wrapper fluid-container">
     <!-- NAVIGATION BAR -->
     <nav>
       <ul>
         <li id="navlogo"><a href="../index.html">WikiCook</a></li>
-        <li><a href="home.html">Home</a></li>
+        <li><a href="search.html">Search</a></li>
         <li><a href="about.html">About Us</a></li>
       </ul>
     </nav>
     <!-- CONTENT -->
-    <div class="search-recipe-content">
-      <div class="search-bar-box">
-        <div class="search-by-ingredients">
+    <div class="search-recipe-content fluid-container">
+      <div class="search-bar-box fluid-container">
+        <h1 class="">Search Recipes</h1>
+        <div class="search-by-ingredients fluid-container">
           <form class="form-inline">
             <div class="form-group">
-              <label for="search-ingredient" class="lead"><b>Search ingredient:&nbsp;</b></label><br>
+              <label for="search-ingredient" class="lead"><b>Ingredient/s:&nbsp;</b></label><br>
               <input type="text" class="form-control" id="search-ingredient" placeholder="eg. egg or egg,salt">
             </div>
           </form>
@@ -38,43 +37,43 @@
             <div class="row">
               <div class="col form-group">
                 <label for="" class="lead"><b>Calorie</b></label>
-                <input type="text" class="form-control" id="search-min-calorie" placeholder="Min Calorie.. eg. 50">
+                <input type="number" class="form-control" id="search-min-calorie" placeholder="Min Calorie.. eg. 50">
               </div>
               <div class="col form-group">
                 <label for="" class="lead"><b>Protein</b></label>
-                <input type="text" class="form-control" id="search-min-protein" placeholder="Min Protein.. eg. 10">
+                <input type="number" class="form-control" id="search-min-protein" placeholder="Min Protein.. eg. 10">
               </div>
               <div class="col form-group">
                 <label for="" class="lead"><b>Fat</b></label>
-                <input type="text" class="form-control" id="search-min-fat" placeholder="Min Fat.. eg. 25">
+                <input type="number" class="form-control" id="search-min-fat" placeholder="Min Fat.. eg. 25">
               </div>
               <div class="col form-group">
                 <label for="" class="lead"><b>Carbohydrates</b></label>
-                <input type="text" class="form-control" id="search-min-carbs" placeholder="Min Carbs.. eg. 150">
+                <input type="number" class="form-control" id="search-min-carbs" placeholder="Min Carbs.. eg. 150">
               </div>
             </div>
           </form>
           <form>
             <div class="row">
               <div class="col form-group">
-                <input type="text" class="form-control" id="search-max-calorie" placeholder="Max Calorie.. eg. 100">
+                <input type="number" class="form-control" id="search-max-calorie" placeholder="Max Calorie.. eg. 100">
               </div>
               <div class="col form-group">
-                <input type="text" class="form-control" id="search-max-protein" placeholder="Max Protein.. eg. 20">
+                <input type="number" class="form-control" id="search-max-protein" placeholder="Max Protein.. eg. 20">
               </div>
               <div class="col form-group">
-                <input type="text" class="form-control" id="search-max-fat" placeholder="Max Fat.. eg. 50">
+                <input type="number" class="form-control" id="search-max-fat" placeholder="Max Fat.. eg. 50">
               </div>
               <div class="col form-group">
-                <input type="text" class="form-control" id="search-max-carbs" placeholder="Max Carbs..eg. 250">
+                <input type="number" class="form-control" id="search-max-carbs" placeholder="Max Carbs..eg. 250">
               </div>
             </div>
           </form>
         </div>
 
-        <div class="filters">
+        <div class="filters fluid-container">
           <button id="showfilter" class="btn btn-primary">Show Filters</button>
-          <div class="filter-options">
+          <div class="filter-options fluid-container">
               <hr>
               <form>
                   <label class="lead"><b>Cuisine:</b></label>
@@ -111,7 +110,7 @@
                     <label class="checkbox-inline lead">
                       <input class="diet" type="radio" name="intolerances" value="pescetarian"> Pescetarian
                     </label>
-                    <label class="checkbox-inline lead"> 
+                    <label class="checkbox-inline lead">
                       <input class="diet" type="radio" name="intolerances" value="lacto%20vegetarian"> Lacto Vegetarian
                     </label>
                     <label class="checkbox-inline lead">
@@ -156,22 +155,54 @@
         </div>
       </div>
 
-      <div class="result">
+      <div class="result fluid-container">
         <h3 id="label">Search Results:</h3>
-        <div class="result-box">
+        <button id="backtorecipe" class="btn btn-primary">Back to recipe list</button>
+        <hr>
+        <div class="result-box fluid-container">
+          <h1 id="startsearch" class="lead">Start searching...</h1>
+          <h1 id="noresults" class="lead"></h1>
         </div>
+        <div class="recipe-info" id="one">
+          <h1 class="recipe-info-title" id="info-title1">Maple-Bacon Kettle Popcorn</h1>
+          <div class="recipe-info-content image-container">
+            <img class="image-container-box" id="image-container1" src="https://spoonacular.com/recipeImages/507950-556x370.jpg">
+            <div id="recipe-videos">
+              <h4>Related Videos</h4>
+            </div>
+            <div class="videos">
+              <iframe height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+              </iframe>
+            </div>
+          </div>
+          <div class="recipe-info-content ingredients-container">
+            <h4>Ingredients</h4>
+            <div class="ingredients-container-list">
+              <ul class="list-group">
+                <li class="list-group-item">4 slices bacon, cooked and grease reserved</li>
+                <li class="list-group-item">¼ cup cooking oil (use the reserved bacon grease and add extra vegetable/canola/olive oil to make ¼ cup)</li>
+                <li class="list-group-item">½ cup corn kernels for popping</li>
+                <li class="list-group-item">3 tablespoons granulated sugar</li>
+                <li class="list-group-item">1 tablespoon maple syrup</li>
+                <li class="list-group-item">1½ teaspoon salt</li>
+              </ul>
+            </div>
+          </div>
       </div>
     </div>
 
     <!-- FOOTER -->
-    <footer class="container">
-
-    </footer>
+<!--     <footer class="fluid-container">
+      <p class="lead">Web Systems and Technologies</p>
+    </footer> -->
   </div>
+  <script src="../js/react.development.js"></script>
+  <script src="../js/react-dom.development.js"></script>
   <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="../js/popper.min.js"></script>
   <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../js/main.js"></script>
+  <script type="text/javascript" src="../js/search.js"></script>
+
 </body>
 
 </html>

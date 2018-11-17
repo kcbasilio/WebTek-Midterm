@@ -13,49 +13,98 @@
 </head>
 <body>
   <div class="wrapper">
+    <button id="random-button" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Get Random Recipes!</button>
+    <a href="html/search.html"><button id="startsearch-btn" class="btn btn-primary">Start Searching!</button></a>
     <div id="intro-content">
       <div class="intro-content-box">
-        <div class="one">
+        <div class="left-box">
           <h1>WikiCook</h1>
-          <a href="html/home.html"><button class="btn btn-primary startsearch-btn">Start Searching!</button></a>
-        </div>
-        <div class="onetwo">
-          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
         </div>
       </div>
       <div class="intro-content-box">
-        <div class="two">
+        <div class="right-box">
           <p class="lead">Start your life with food!</p>
         </div>
       </div>
     </div>
-    
+
 
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Recipe Title: <span id="random-recipe-title"></span></h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              ...
+              <figure class="random-recipe-box" data-id="917600">
+                <div id="image-section" class="image-section">
+                </div>
+              </figure>
+              <div class="details-section">
+                <ul class="nav nav-tabs nav-fill">
+                  <li class="nav-item" data-id="random-recipe-ingredients">
+                    <a id="ingre-tab" class="nav-link active">Ingredients</a>
+                  </li>
+                  <li class="nav-item" data-id="random-recipe-nutritions">
+                    <a id="nutri-tab" class="nav-link">Nutritions</a>
+                  </li>
+                </ul>
+                <div id="random-recipe-ingredients">
+                  <h3>Ingredients</h3>
+                  <ul class="list-group">
+
+                  </ul>
+                </div>
+                <div id="random-recipe-nutritions">
+                  <h3>Nutrition</h3>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Nutrient</th>
+                        <th scope="col">Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button id="secondrandom-btn" class="btn btn-secondary">Get Another Recipe</button>
+              <a href="html/search.html"><button class="cover btn btn-primary" id="917600">Start Searching!</button></a>
             </div>
           </div>
         </div>
       </div>
   </div>
-  <script type="text/javascript" src="js/popper.min.js"></script>
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/random_recipe.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- <script type="text/javascript" src="js/main.js"></script> -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#random-recipe-nutritions").hide();
+
+      $("#ingre-tab").click(function () {
+        $("#random-recipe-ingredients").slideDown(500);
+        $("#random-recipe-nutritions").slideUp(500);
+        $(this).addClass("active");
+        $("#nutri-tab").removeClass("active");
+      })
+      $("#nutri-tab").click(function () {
+        $("#random-recipe-nutritions").slideDown(500);
+        $("#random-recipe-ingredients").slideUp(500);
+        $(this).addClass("active");
+        $("#ingre-tab").removeClass("active");
+      })
+    })
+  </script>
 </body>
 
 </html>

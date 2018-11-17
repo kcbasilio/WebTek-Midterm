@@ -10,7 +10,7 @@ $(document).ready(function() {
         var id = $(this).attr("data-id");
         $("#" + id).slideToggle(200);
 	});
-	  
+
 	$("#showfilter").click(function() {
 	  $(".filter-options").slideToggle(200);
 	});
@@ -20,7 +20,11 @@ $(document).ready(function() {
 	 *  Takes inputs from the document forms and append it to the url of the api endpoint.
 	 */
 	app.searchRecipes = function() {
-		console.log("searching recipe....");
+
+		$('#startsearch').show();
+		$('#startsearch').text("Searching...");
+		$('figure').remove();
+
 		let querySearch = $("#search-ingredient").val(); // ingredient/s query
 		let cuisineArr = []; // cuisine of the recipe
 		let cuisine = "";
@@ -39,33 +43,33 @@ $(document).ready(function() {
 		for (let index = 0; index < document.getElementsByClassName('cuisine').length; index++) {
 
 			if(document.getElementsByClassName('cuisine')[index].checked) {
-				cuisineArr.push(document.getElementsByClassName('cuisine')[index].value) 
+				cuisineArr.push(document.getElementsByClassName('cuisine')[index].value)
 			} else {
 				continue;
 			}
-			
+
 		}
 		cuisine = cuisineArr.length == 0 ? "" : `&cuisine=${cuisineArr.join(",")}`;
 
 		for (let index = 0; index < document.getElementsByClassName('intolerances').length; index++) {
 
 			if(document.getElementsByClassName('intolerances')[index].checked) {
-				intolerancesArr.push(document.getElementsByClassName('intolerances')[index].value) 
+				intolerancesArr.push(document.getElementsByClassName('intolerances')[index].value)
 			} else {
 				continue;
 			}
-			
+
 		}
 		intolerances = intolerancesArr.length == 0 ? "" : `&intolerances=${intolerancesArr.join(",")}`;
 
 		for (let index = 0; index < document.getElementsByClassName('diet').length; index++) {
 
 			if(document.getElementsByClassName('diet')[index].checked) {
-				diet = `&diet=${document.getElementsByClassName('diet')[index].value}`; 
+				diet = `&diet=${document.getElementsByClassName('diet')[index].value}`;
 			} else {
 				continue;
 			}
-			
+
 		}
 
 		let api_endpoint = `https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex?addRecipeInformation=true&instructionsRequired=true&includeIngredients=${querySearch}${cuisine}${intolerances}${diet}${maxCalorie}${maxCarb}${maxFat}${maxProtein}${minCalorie}${minCarb}${minFat}${minProtein}&number=20`; // api endpoint with parameters
@@ -78,20 +82,74 @@ $(document).ready(function() {
 				"Accept": "application/json"
 			},
 			success: function (data) {
-				let i = 1;
-				let counter = 0;
-				$.each(data.results, (index, value) => {
-					app.createResultSubBox(value.title, value.image, value.id, counter+1);
-					counter++;
-					i++;
-				})
+				if(app.isEmpty(data)) {
+					document.getElementById('noresults').textContent = "No Results."
+				} else {
+					$('#startsearch').hide();
+					let i = 1;
+					let counter = 0;
+					$.each(data.results, (index, value) => {
+						app.createResultSubBox(value.title, value.image, value.id, counter+1);
+						counter++;
+						i++;
+					})
+				}
+
 		  },
 			error: function (data) {
-		  		console.log(data);
+				window.alert("There's a problem.");
+				window.reload();
 		  }
 		})
 
 	}
+
+	/**
+	 * GET RECIPE INFORMATION
+	 */
+	app.getRecipeInformation = function () {
+
+		let recipe_id = $(this).attr("id"); // id of the recipe
+		let api_endpoint = `https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/${recipe_id}/information?includeNutrition=true`; // api endpoint with parameters
+		$.ajax({
+			url: api_endpoint,
+			headers: {
+				"X-Mashape-Key": APP_KEY,
+				"Accept": "application/json"
+			},
+			success: function (data) {
+				app.createRecipeInfoBox(data);
+		  },
+			error: function (data) {
+				window.alert("There's a problem.");
+				window.reload();
+		  }
+		})
+
+	}
+
+	app.searchVideos = function () {
+
+		let api_endpoint = `https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/videos/search?number=10&query=bacon`; // api endpoint with parameters
+		$.ajax({
+			url: '../json/videos.json',
+			// headers: {
+			// 	"X-Mashape-Key": APP_KEY,
+			// 	"Accept": "application/json"
+			// },
+			success: function (data) {
+				$.each(data.videos, (index, value) => {
+
+				})
+		  },
+			error: function (data) {
+				window.alert("There's a problem.");
+				window.reload();
+		  }
+		})
+	}
+
+	app.searchVideos();
 
 	/**
 	 * CREATE RESULT BOXES PER RECIPE
@@ -100,7 +158,7 @@ $(document).ready(function() {
 	 */
 	app.createResultSubBox = function (title, image, id, counter) {
 		console.log("creating subboxes....");
-
+		$('#startsearch').hide();
 		// DOM Manipulation
 
 		// create elements
@@ -122,7 +180,7 @@ $(document).ready(function() {
 		viewbutton.setAttribute("class", "cover btn btn-primary");
 		viewbutton.setAttribute("id", id);
 
-		// append elements 
+		// append elements
 		title_div.appendChild(h3);
 		title_div.appendChild(viewbutton);
 		figure.appendChild(title_div);
@@ -142,7 +200,7 @@ $(document).ready(function() {
 		$(".result-box").fadeOut(100);
 
 		//DOM Manipulation
-		
+
 		// create elements
 		let mainDiv = document.createElement('div');
 		let titleHeader = document.createElement('h1');
@@ -180,7 +238,9 @@ $(document).ready(function() {
 		main_div_table.setAttribute("class","nutritionfacts-container-table");
 		table.setAttribute("class","table table-striped");
 		thLabel.setAttribute("scope","col");
+		thLabel.textContent = "Nutrient";
 		thQuantity.setAttribute("scope","col");
+		thQuantity.textContent = "Amount";
 
 		// append elements
 		imageContainerDiv.appendChild(img);
@@ -208,7 +268,7 @@ $(document).ready(function() {
 	/**
 	 * DISPLAY INFORMATION IN THE RECIPE INFORMATION BOX
 	 * Parameter/s: ingredients of the recipe, nutritions associated with the recipe
-	 * Display the ingrdients and nutrition facts of the recipe by creating new elements 
+	 * Display the ingrdients and nutrition facts of the recipe by creating new elements
 	 */
 	app.displayInfo = function (ingredients, nutrition) {
 
@@ -228,39 +288,14 @@ $(document).ready(function() {
 		for (let x = 0; x < ingredients[0].length; x++) {
 			let li = document.createElement("li");
 			li.textContent = ingredients[0][x].originalString;
-			li.setAttribute('class', 'list-group-item'); 
+			li.setAttribute('class', 'list-group-item');
 			document.getElementsByClassName('list-group')[0].appendChild(li);
 		}
 
 	}
 
 	/**
-	 * GET RECIPE INFORMATION
-	 */
-	app.getRecipeInformation = function () {
-
-		let recipe_id = $(this).attr("id"); // id of the recipe
-		console.log(recipe_id);
-		console.log("getting recipe info...");
-		let api_endpoint = `https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/${recipe_id}/information?includeNutrition=true`; // api endpoint with parameters
-		$.ajax({
-			url: api_endpoint,
-			headers: {
-				"X-Mashape-Key": APP_KEY,
-				"Accept": "application/json"
-			},
-			success: function (data) {
-				app.createRecipeInfoBox(data);
-		  },
-			error: function (data) {
-		  	console.log(data);
-		  }
-		})
-
-	}
-
-	/**
-	 * GET NUTRITIONS FROM THE DATA(JSON) 
+	 * GET NUTRITIONS FROM THE DATA(JSON)
 	 * Parameter/s: recipe
 	 * Returns an array containing nutritions
 	 */
@@ -280,7 +315,7 @@ $(document).ready(function() {
 	}
 
 	/**
-	 * GET INGREDIENTS FROM THE DATA(JSON) 
+	 * GET INGREDIENTS FROM THE DATA(JSON)
 	 * Parameter/s: recipe
 	 * Returns an array containing ingredients
 	 */
@@ -299,8 +334,19 @@ $(document).ready(function() {
 
 	}
 
+	app.isEmpty = function (object) {
+	    for(var key in object) {
+	        if(object.hasOwnProperty(key))
+	            return false;
+	    }
+	    return true;
+	}
 
-
+	$('.result').on("click", "button", function() {
+		console.log("hello!");
+		$('.recipe-info').fadeOut(500);
+		$(".result-box").fadeIn(1000);
+	})
 	$('.result-box').on("click", "button", app.getRecipeInformation);
 	app.start = document.getElementById('search-recipe-ingredients').addEventListener("click", app.searchRecipes);
 

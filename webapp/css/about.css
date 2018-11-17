@@ -7,6 +7,27 @@
 	text-align: center;
 }
 
-.description h1 + p {
+#appdesc {
+	width: 500px;
+	margin: auto;
+}
+
+#appdesc p {
+	margin: 0;
+	text-align: justify;
+}
+
+.members {
+	margin: auto;
+	margin-top: 50px;
+	/* border: 1px solid black; */
+	width: 500px;
+}
+
+ul li {
 	text-align: center;
+}
+
+#m-header {
+	font-weight: bold;
 }
