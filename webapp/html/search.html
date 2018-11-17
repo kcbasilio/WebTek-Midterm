@@ -11,198 +11,235 @@
   <title>WikiCook</title>
 </head>
 <body>
-  <!-- WRAPPER -->
-  <div class="wrapper fluid-container">
-    <!-- NAVIGATION BAR -->
-    <nav>
-      <ul>
-        <li id="navlogo"><a href="../index.html">WikiCook</a></li>
-        <li><a href="search.html">Search</a></li>
-        <li><a href="about.html">About Us</a></li>
-      </ul>
-    </nav>
-    <!-- CONTENT -->
-    <div class="search-recipe-content fluid-container">
-      <div class="search-bar-box fluid-container">
-        <h1 class="">Search Recipes</h1>
-        <div class="search-by-ingredients fluid-container">
-          <form class="form-inline">
-            <div class="form-group">
-              <label for="search-ingredient" class="lead"><b>Ingredient/s:&nbsp;</b></label><br>
-              <input type="text" class="form-control" id="search-ingredient" placeholder="eg. egg or egg,salt">
-            </div>
-          </form>
-          <form>
-            <hr>
-            <div class="row">
-              <div class="col form-group">
-                <label for="" class="lead"><b>Calorie</b></label>
-                <input type="number" class="form-control" id="search-min-calorie" placeholder="Min Calorie.. eg. 50">
-              </div>
-              <div class="col form-group">
-                <label for="" class="lead"><b>Protein</b></label>
-                <input type="number" class="form-control" id="search-min-protein" placeholder="Min Protein.. eg. 10">
-              </div>
-              <div class="col form-group">
-                <label for="" class="lead"><b>Fat</b></label>
-                <input type="number" class="form-control" id="search-min-fat" placeholder="Min Fat.. eg. 25">
-              </div>
-              <div class="col form-group">
-                <label for="" class="lead"><b>Carbohydrates</b></label>
-                <input type="number" class="form-control" id="search-min-carbs" placeholder="Min Carbs.. eg. 150">
-              </div>
-            </div>
-          </form>
-          <form>
-            <div class="row">
-              <div class="col form-group">
-                <input type="number" class="form-control" id="search-max-calorie" placeholder="Max Calorie.. eg. 100">
-              </div>
-              <div class="col form-group">
-                <input type="number" class="form-control" id="search-max-protein" placeholder="Max Protein.. eg. 20">
-              </div>
-              <div class="col form-group">
-                <input type="number" class="form-control" id="search-max-fat" placeholder="Max Fat.. eg. 50">
-              </div>
-              <div class="col form-group">
-                <input type="number" class="form-control" id="search-max-carbs" placeholder="Max Carbs..eg. 250">
-              </div>
-            </div>
-          </form>
-        </div>
 
-        <div class="filters fluid-container">
-          <button id="showfilter" class="btn btn-primary">Show Filters</button>
-          <div class="filter-options fluid-container">
-              <hr>
-              <form>
-                  <label class="lead"><b>Cuisine:</b></label>
-                  <label class="checkbox-inline lead">
-                    <input class="cuisine" type="checkbox" value="african"> African
-                  </label>
-                  <label class="checkbox-inline lead">
-                    <input class="cuisine" type="checkbox" value="american"> American
-                  </label>
-                  <label class="checkbox-inline lead">
-                    <input class="cuisine" type="checkbox" value="british"> British
-                  </label>
-                  <label class="checkbox-inline lead">
-                    <input class="cuisine" type="checkbox" value="chinese"> Chinese
-                  </label>
-                  <label class="checkbox-inline lead">
-                    <input class="cuisine" type="checkbox" value="french"> French
-                  </label>
-                  <label class="checkbox-inline lead">
-                    <input class="cuisine" type="checkbox" value="german"> German
-                  </label>
-                  <label class="checkbox-inline lead">
-                    <input class="cuisine" type="checkbox" value="indian"> Indian
-                  </label>
-                  <label class="checkbox-inline lead">
-                    <input class="cuisine" type="checkbox" value="italian"> Italian
-                  </label>
-                  <label class="checkbox-inline lead">
-                    <input class="cuisine" type="checkbox" value="korean"> Korean
-                  </label>
-                </form>
-                <form>
-                    <label class="lead"><b>Diets:</b></label>
-                    <label class="checkbox-inline lead">
-                      <input class="diet" type="radio" name="intolerances" value="pescetarian"> Pescetarian
-                    </label>
-                    <label class="checkbox-inline lead">
-                      <input class="diet" type="radio" name="intolerances" value="lacto%20vegetarian"> Lacto Vegetarian
-                    </label>
-                    <label class="checkbox-inline lead">
-                      <input class="diet" type="radio" name="intolerances" value="ovo%20vegetarian"> Ovo Vegetarian
-                    </label>
-                    <label class="checkbox-inline lead">
-                      <input class="diet" type="radio" name="intolerances" value="vegan"> Vegan
-                    </label>
-                    <label class="checkbox-inline lead">
-                      <input class="diet" type="radio" name="intolerances" value="paleo"> Paleo
-                    </label>
-                    <label class="checkbox-inline lead">
-                      <input class="diet" type="radio" name="intolerances" value="primal"> Primal
-                    </label>
-                    <label class="checkbox-inline lead">
-                      <input class="diet" type="radio" name="intolerances" value="vegetarian"> Vegetarian
-                    </label>
-                  </form>
-                  <form>
-                    <label class="lead"><b>Allergies/Intolerances:</b></label>
-                    <label class="checkbox-inline lead">
-                      <input class="intolerances" type="checkbox" value="peanut"> Peanut
-                    </label>
-                    <label class="checkbox-inline lead">
-                      <input class="intolerances" type="checkbox" value="gluten"> Gluten
-                    </label>
-                    <label class="checkbox-inline lead">
-                      <input class="intolerances" type="checkbox" value="dairy"> Dairy
-                    </label>
-                    <label class="checkbox-inline lead">
-                      <input class="intolerances" type="checkbox" value="tree%20nut"> Tree nut
-                    </label>
-                    <label class="checkbox-inline lead">
-                      <input class="intolerances" type="checkbox" value="egg"> Egg
-                    </label>
-                    <label class="checkbox-inline lead">
-                      <input class="intolerances" type="checkbox" value="sesame"> Sesame
-                    </label>
-                  </form>
-          </div>
-        <button id="search-recipe-ingredients" class="btn btn-primary">Search!</button>
-        </div>
-      </div>
+  <div id="app" class="fluid-container"></div>
 
-      <div class="result fluid-container">
-        <h3 id="label">Search Results:</h3>
-        <button id="backtorecipe" class="btn btn-primary">Back to recipe list</button>
-        <hr>
-        <div class="result-box fluid-container">
-          <h1 id="startsearch" class="lead">Start searching...</h1>
-          <h1 id="noresults" class="lead"></h1>
-        </div>
-        <div class="recipe-info" id="one">
-          <h1 class="recipe-info-title" id="info-title1">Maple-Bacon Kettle Popcorn</h1>
-          <div class="recipe-info-content image-container">
-            <img class="image-container-box" id="image-container1" src="https://spoonacular.com/recipeImages/507950-556x370.jpg">
-            <div id="recipe-videos">
-              <h4>Related Videos</h4>
-            </div>
-            <div class="videos">
-              <iframe height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-              </iframe>
-            </div>
-          </div>
-          <div class="recipe-info-content ingredients-container">
-            <h4>Ingredients</h4>
-            <div class="ingredients-container-list">
-              <ul class="list-group">
-                <li class="list-group-item">4 slices bacon, cooked and grease reserved</li>
-                <li class="list-group-item">¼ cup cooking oil (use the reserved bacon grease and add extra vegetable/canola/olive oil to make ¼ cup)</li>
-                <li class="list-group-item">½ cup corn kernels for popping</li>
-                <li class="list-group-item">3 tablespoons granulated sugar</li>
-                <li class="list-group-item">1 tablespoon maple syrup</li>
-                <li class="list-group-item">1½ teaspoon salt</li>
-              </ul>
-            </div>
-          </div>
-      </div>
-    </div>
-
-    <!-- FOOTER -->
-<!--     <footer class="fluid-container">
-      <p class="lead">Web Systems and Technologies</p>
-    </footer> -->
-  </div>
-  <script src="../js/react.development.js"></script>
-  <script src="../js/react-dom.development.js"></script>
+  <script src="https://unpkg.com/react@15/dist/react.min.js"> </script>
+  <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
   <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="../js/popper.min.js"></script>
   <script type="text/javascript" src="../js/bootstrap.min.js"></script>
   <script type="text/javascript" src="../js/search.js"></script>
+  <script type="text/babel">
 
+    var NavbarComponent = React.createClass({
+      render: function () {
+        return (
+          <nav>
+            <ul>
+              <li id="navlogo"><a href="../index.html">WikiCook</a></li>
+              <li><a href="search.html">Search</a></li>
+              <li><a href="about.html">About Us</a></li>
+            </ul>
+          </nav>
+        );
+      }
+    });
+
+    var Results = React.createClass({
+      render: function () {
+        return (
+          <div className="result fluid-container">
+            <h3 id="label">Search Results:</h3>
+            <button id="backtorecipe" className="btn btn-primary">Back to recipe list</button>
+            <hr/>
+            <div className="result-box fluid-container">
+              <h1 id="startsearch" className="lead">Start searching...</h1>
+              <h1 id="noresults" className="lead"></h1>
+            </div>
+          </div>
+        );
+      }
+    });
+
+    var SearchBarsComponent = React.createClass({
+      render: function () {
+        return (
+          <div className="search-by-ingredients fluid-container">
+            <form className="form-inline">
+              <div className="form-group">
+                <label htmlfor="search-ingredient" className="lead"><b>Ingredient/s:&nbsp;</b></label><br/>
+                <input type="text" className="form-control" id="search-ingredient" placeholder="eg. egg or egg,salt"/>
+              </div>
+            </form>
+            <form>
+              <hr />
+              <div className="row">
+                <div className="col form-group">
+                  <label htmlfor="search-min-calorie" className="lead"><b>Calorie</b></label>
+                  <input type="number" className="form-control" id="search-min-calorie" placeholder="Min Calorie.. eg. 50"/>
+                </div>
+                <div className="col form-group">
+                  <label htmlfor="search-min-protein" className="lead"><b>Protein</b></label>
+                  <input type="number" className="form-control" id="search-min-protein" placeholder="Min Protein.. eg. 10"/>
+                </div>
+                <div className="col form-group">
+                  <label htmlfor="search-min-fat" className="lead"><b>Fat</b></label>
+                  <input type="number" className="form-control" id="search-min-fat" placeholder="Min Fat.. eg. 25"/>
+                </div>
+                <div className="col form-group">
+                  <label htmlfor="search-min-carbs" className="lead"><b>Carbohydrates</b></label>
+                  <input type="number" className="form-control" id="search-min-carbs" placeholder="Min Carbs.. eg. 150"/>
+                </div>
+              </div>
+            </form>
+            <form>
+              <div className="row">
+                <div className="col form-group">
+                  <input type="number" className="form-control" id="search-max-calorie" placeholder="Max Calorie.. eg. 100"/>
+                </div>
+                <div className="col form-group">
+                  <input type="number" className="form-control" id="search-max-protein" placeholder="Max Protein.. eg. 20"/>
+                </div>
+                <div className="col form-group">
+                  <input type="number" className="form-control" id="search-max-fat" placeholder="Max Fat.. eg. 50"/>
+                </div>
+                <div className="col form-group">
+                  <input type="number" className="form-control" id="search-max-carbs" placeholder="Max Carbs..eg. 250"/>
+                </div>
+              </div>
+            </form>
+          </div>
+        );
+      }
+    });
+
+    var CuisinesFilterComponent = React.createClass({
+      render: function () {
+        return (
+          <form>
+              <label className="lead"><b>Cuisine:</b></label>
+              <label className="checkbox-inline lead">
+                <input className="cuisine" type="checkbox" value="african"/> {this.props.cuisine[0]}
+              </label>
+              <label className="checkbox-inline lead">
+                <input className="cuisine" type="checkbox" value="american"/> {this.props.cuisine[1]}
+              </label>
+              <label className="checkbox-inline lead">
+                <input className="cuisine" type="checkbox" value="british"/> {this.props.cuisine[2]}
+              </label>
+              <label className="checkbox-inline lead">
+                <input className="cuisine" type="checkbox" value="chinese"/> {this.props.cuisine[3]}
+              </label>
+              <label className="checkbox-inline lead">
+                <input className="cuisine" type="checkbox" value="french"/> {this.props.cuisine[4]}
+              </label>
+              <label className="checkbox-inline lead">
+                <input className="cuisine" type="checkbox" value="german"/> {this.props.cuisine[5]}
+              </label>
+              <label className="checkbox-inline lead">
+                <input className="cuisine" type="checkbox" value="indian"/> {this.props.cuisine[6]}
+              </label>
+              <label className="checkbox-inline lead">
+                <input className="cuisine" type="checkbox" value="italian"/> {this.props.cuisine[7]}
+              </label>
+              <label className="checkbox-inline lead">
+                <input className="cuisine" type="checkbox" value="korean"/> {this.props.cuisine[8]}
+              </label>
+            </form>
+        );
+      }
+    });
+
+    var DietsComponent = React.createClass({
+      render: function () {
+        return (
+          <form>
+              <label className="lead"><b>Diets:</b></label>
+              <label className="checkbox-inline lead">
+                <input className="diet" type="radio" name="intolerances" value="pescetarian"/> {this.props.diet[0]}
+              </label>
+              <label className="checkbox-inline lead">
+                <input className="diet" type="radio" name="intolerances" value="lacto%20vegetarian"/> {this.props.diet[1]}
+              </label>
+              <label className="checkbox-inline lead">
+                <input className="diet" type="radio" name="intolerances" value="ovo%20vegetarian"/> {this.props.diet[2]}
+              </label>
+              <label className="checkbox-inline lead">
+                <input className="diet" type="radio" name="intolerances" value="vegan"/> {this.props.diet[3]}
+              </label>
+              <label className="checkbox-inline lead">
+                <input className="diet" type="radio" name="intolerances" value="paleo"/> {this.props.diet[4]}
+              </label>
+              <label className="checkbox-inline lead">
+                <input className="diet" type="radio" name="intolerances" value="primal"/> {this.props.diet[5]}
+              </label>
+              <label className="checkbox-inline lead">
+                <input className="diet" type="radio" name="intolerances" value="vegetarian"/> {this.props.diet[6]}
+              </label>
+            </form>
+        );
+      }
+    });
+
+    var IntolerancesComponent = React.createClass({
+      render: function () {
+        return (
+          <form>
+            <label className="lead"><b>Allergies/Intolerances:</b></label>
+            <label className="checkbox-inline lead">
+              <input className="intolerances" type="checkbox" value="peanut"/> {this.props.intolerances[0]}
+            </label>
+            <label className="checkbox-inline lead">
+              <input className="intolerances" type="checkbox" value="gluten"/> {this.props.intolerances[1]}
+            </label>
+            <label className="checkbox-inline lead">
+              <input className="intolerances" type="checkbox" value="dairy"/> {this.props.intolerances[2]}
+            </label>
+            <label className="checkbox-inline lead">
+              <input className="intolerances" type="checkbox" value="tree%20nut"/> {this.props.intolerances[3]}
+            </label>
+            <label className="checkbox-inline lead">
+              <input className="intolerances" type="checkbox" value="egg"/> {this.props.intolerances[4]}
+            </label>
+            <label className="checkbox-inline lead">
+              <input className="intolerances" type="checkbox" value="sesame"/> {this.props.intolerances[5]}
+            </label>
+          </form>
+        );
+      }
+    });
+
+    var FiltersComponent = React.createClass({
+      render: function () {
+        return (
+          <div className="filters fluid-container">
+            <button id="showfilter" className="btn btn-primary">Show Filters</button>
+            <div className="filter-options fluid-container">
+              <hr />
+              <CuisinesFilterComponent cuisine={["African","American","British","Chinese","French","German","Indian","Italian","Korean"]}/>
+              <DietsComponent diet={["Pescetarian","Lacto Vegetarian","Ovo Vegetarian","Vegan","Paleo","Primal","Vegetarian"]}/>
+              <IntolerancesComponent intolerances={["Peanut","Gluten","Dairy","Tree nut","Egg","Sesame"]}/>
+            </div>
+            <button id="search-recipe-ingredients" className="btn btn-primary">Search!</button>
+          </div>
+        );
+      }
+    });
+
+    var SearchBodyComponent = React.createClass({
+      render: function () {
+        return (
+          <div class="search-recipe-content fluid-container">
+            <div className="search-bar-box fluid-container">
+              <h1 className="">Search Recipes</h1>
+              <SearchBarsComponent />
+              <FiltersComponent />
+            </div>
+          </div>
+        );
+      }
+    });
+
+    ReactDOM.render(
+      <div className="main">
+        <NavbarComponent />
+        <SearchBodyComponent />
+        <Results />
+      </div>,
+      document.getElementById('app'));
+  </script>
 </body>
 
 </html>

@@ -8,40 +8,95 @@
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/master.css">
   <link rel="stylesheet" href="../css/about.css">
-  <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
-<!--   <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script> -->
   <title>About Us</title>
 </head>
 <body>
-  <div class="wrapper">
-    <nav>
-      <ul>
-        <li id="navlogo"><a href="../index.html">WikiCook</a></li>
-        <li><a href="search.html">Search</a></li>
-        <li><a href="about.html">About Us</a></li>
-      </ul>
-    </nav>
-    <div class="description">
-      <h1 class="display-4">WikiCook</h1>
-      <div id="appdesc">
-        <p class="lead">WikiCook is a web application that searches different recipes.</p>
-      </div>
-      <div class="members">
-        <ul class="list-group">
-          <li class="list-group-item lead" id="m-header">Developers:</li>
-          <li class="list-group-item lead">Henry Arellano</li>
-          <li class="list-group-item lead">Jaime A. Carvajal</li>
-          <li class="list-group-item lead">Klint B. Chinayog</li>
-          <li class="list-group-item lead">Jan Rei Sibaen</li>
-        </ul>
-      </div>
-      <div>
-        This website serves as a guide to people who wish learn recipes and possibly to improve upon exisitng recipes. This website was created as a requirement for the the subject Web Systems and Technologies 
-      </div>
-    </div>
-  </div>
+  <div id="wrapper"></div>
+  <script src="https://unpkg.com/react@15/dist/react.min.js"> </script>
+  <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <script type="text/babel">
+
+    var NavbarComponent = React.createClass({
+      render: function () {
+        return (
+          <nav>
+            <ul>
+              <li id="navlogo"><a href="../index.html">WikiCook</a></li>
+              <li><a href="search.html">Search</a></li>
+              <li><a href="about.html">About Us</a></li>
+            </ul>
+          </nav>
+        );
+      }
+    });
+
+    var DescriptionComponent = React.createClass({
+      render: function () {
+        return (
+          <div>
+            <h1 className="display-4">WikiCook</h1>
+            <div id="appdesc">
+              <p className="lead">This website serves as a guide to people who wish learn recipes and possibly to improve upon exisitng recipes. This website was created as a requirement for the the subject Web Systems and Technologies.</p>
+            </div>
+          </div>
+        );
+      }
+    });
+
+    var MembersComponent = React.createClass({
+      render: function () {
+        return (
+          <div className="members">
+            <ul className="list-group">
+              <li className="list-group-item lead" id="m-header">Developers:</li>
+              <Member name="Henry Arellano" />
+              <Member name="Jaime A. Carvajal" />
+              <Member name="Klint B. Chinayog" />
+              <Member name="Jan Rei Sibaen" />
+            </ul>
+          </div>
+        );
+      }
+    });
+
+    var Member = React.createClass({
+      render: function () {
+        return (
+              <li className="list-group-item lead">{this.props.name}</li>
+        );
+      }
+    });
+
+    var OtherInfo = React.createClass({
+      render: function () {
+        return (
+          <div id="otherinfo">
+            <ClassInfo group="3" subject="Web System and Technologies" code="9456A" sched="10:00 - 11:00 TF"/>
+          </div>
+        );
+      }
+    });
+
+
+    var ClassInfo = React.createClass({
+      render: function () {
+        return (
+          <p className="lead">Group {this.props.group} | {this.props.subject} | {this.props.code} | {this.props.sched}</p>
+        );
+      }
+    });
+
+    ReactDOM.render(
+      <div className="description">
+        <NavbarComponent />
+        <DescriptionComponent />
+        <MembersComponent />
+        <OtherInfo />
+      </div>,
+      document.getElementById('wrapper'));
+
+  </script>
 </body>
 
 </html>

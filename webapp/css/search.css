@@ -89,7 +89,7 @@
 	height: 65px;
 }
 
-.result-subbox .title-section h3 {
+.result-subbox .title-section h5 {
 	float: left;
 	width: 80%;
 }
@@ -153,6 +153,7 @@
 
 iframe {
 	width: 100%;
+	height: 345px;
 }
 
 .ingredients-container-list {

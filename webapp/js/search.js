@@ -21,11 +21,12 @@ $(document).ready(function() {
 	 */
 	app.searchRecipes = function() {
 
+		$('#noresults').hide();
 		$('#startsearch').show();
 		$('#startsearch').text("Searching...");
 		$('figure').remove();
 
-		let querySearch = $("#search-ingredient").val(); // ingredient/s query
+		let querySearch = $("#search-ingredient").val() != "" ? `&includeIngredients=${$("#search-ingredient").val()}` : ""; // ingredient/s query
 		let cuisineArr = []; // cuisine of the recipe
 		let cuisine = "";
 		let intolerancesArr = []; // intolerances associated with the recipe
@@ -72,8 +73,7 @@ $(document).ready(function() {
 
 		}
 
-		let api_endpoint = `https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex?addRecipeInformation=true&instructionsRequired=true&includeIngredients=${querySearch}${cuisine}${intolerances}${diet}${maxCalorie}${maxCarb}${maxFat}${maxProtein}${minCalorie}${minCarb}${minFat}${minProtein}&number=20`; // api endpoint with parameters
-
+		let api_endpoint = `https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex?addRecipeInformation=true&instructionsRequired=true${querySearch}${cuisine}${intolerances}${diet}${maxCalorie}${maxCarb}${maxFat}${maxProtein}${minCalorie}${minCarb}${minFat}${minProtein}&number=20`; // api endpoint with parameters
 		console.log(api_endpoint);
 		$.ajax({
 			url: api_endpoint,
@@ -82,10 +82,15 @@ $(document).ready(function() {
 				"Accept": "application/json"
 			},
 			success: function (data) {
-				if(app.isEmpty(data)) {
+				console.log(data.totalResults);
+				if(data.totalResults == 0) {
+					$('#startsearch').hide();
 					document.getElementById('noresults').textContent = "No Results."
+					$('#noresults').show();
 				} else {
 					$('#startsearch').hide();
+					console.log("good");
+
 					let i = 1;
 					let counter = 0;
 					$.each(data.results, (index, value) => {
@@ -130,16 +135,20 @@ $(document).ready(function() {
 
 	app.searchVideos = function () {
 
-		let api_endpoint = `https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/videos/search?number=10&query=bacon`; // api endpoint with parameters
+		let query = $("#search-ingredient").val();
+		let youtube_embed = "https://www.youtube.com/embed/";
+		let api_endpoint = `https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/videos/search?number=3&query=${query}`; // api endpoint with parameters
 		$.ajax({
-			url: '../json/videos.json',
-			// headers: {
-			// 	"X-Mashape-Key": APP_KEY,
-			// 	"Accept": "application/json"
-			// },
+			url: api_endpoint,
+			headers: {
+				"X-Mashape-Key": APP_KEY,
+				"Accept": "application/json"
+			},
 			success: function (data) {
 				$.each(data.videos, (index, value) => {
-
+					let iframe = document.createElement("iframe");
+					iframe.setAttribute("src", youtube_embed + value.youTubeId);
+					document.getElementById('list-videos').appendChild(iframe);
 				})
 		  },
 			error: function (data) {
@@ -149,15 +158,13 @@ $(document).ready(function() {
 		})
 	}
 
-	app.searchVideos();
-
 	/**
 	 * CREATE RESULT BOXES PER RECIPE
 	 * Parameter/s: title of the recipe, image url of the recipe, id of the recipe, counter 1, counter 2
 	 * Dynamically create boxes in the html document for the searched recipes
 	 */
 	app.createResultSubBox = function (title, image, id, counter) {
-		console.log("creating subboxes....");
+
 		$('#startsearch').hide();
 		// DOM Manipulation
 
@@ -165,7 +172,7 @@ $(document).ready(function() {
 		let figure = document.createElement('figure'); // create figure element
 		let image_div = document.createElement('div'); // create div element
 		let title_div = document.createElement('div'); // create div element
-		let h3 = document.createElement('h3'); // create h3 element
+		let h5 = document.createElement('h5'); // create h3 element
 		let viewbutton = document.createElement('button'); // create viewbutton element
 
 		// set contents and attributes to the elements
@@ -174,14 +181,14 @@ $(document).ready(function() {
 		image_div.setAttribute("class", "image-section");
 		image_div.setAttribute("style", "background-image: url(" + image + ")");
 		title_div.setAttribute("class", "title-section");
-		h3.setAttribute("id", "recipe-title" + counter);
-		h3.textContent = title;
+		h5.setAttribute("id", "recipe-title" + counter);
+		h5.textContent = title;
 		viewbutton.textContent = "View Recipe";
 		viewbutton.setAttribute("class", "cover btn btn-primary");
 		viewbutton.setAttribute("id", id);
 
 		// append elements
-		title_div.appendChild(h3);
+		title_div.appendChild(h5);
 		title_div.appendChild(viewbutton);
 		figure.appendChild(title_div);
 		figure.appendChild(image_div);
@@ -195,7 +202,6 @@ $(document).ready(function() {
 	 * Dynamically creates a box in the html document for the recipe information
 	 */
 	app.createRecipeInfoBox = function (recipe) {
-		console.log("creating info boxes....");
 
 		$(".result-box").fadeOut(100);
 
@@ -205,6 +211,9 @@ $(document).ready(function() {
 		let mainDiv = document.createElement('div');
 		let titleHeader = document.createElement('h1');
 		let imageContainerDiv = document.createElement('div');
+		let videoDiv = document.createElement('div');
+		let h4video = document.createElement('h4');
+		let videoslistDiv = document.createElement('div');
 		let img = document.createElement('img');
 		let ingredientsContainerDiv = document.createElement('div');
 		let h4_ingre = document.createElement('h4');
@@ -228,6 +237,9 @@ $(document).ready(function() {
 		titleHeader.textContent = recipe.title;
 		titleHeader.setAttribute("id","info-title1");
 		imageContainerDiv.setAttribute("class","recipe-info-content image-container");
+		videoDiv.setAttribute("id", "recipe-videos");
+		h4video.textContent = "Related Videos"
+		videoslistDiv.setAttribute("id", "list-videos")
 		img.setAttribute("class","image-container-box");
 		img.setAttribute("id","image-container1");
 		img.setAttribute("src", recipe.image);
@@ -243,7 +255,10 @@ $(document).ready(function() {
 		thQuantity.textContent = "Amount";
 
 		// append elements
+		videoDiv.appendChild(h4video);
 		imageContainerDiv.appendChild(img);
+		imageContainerDiv.appendChild(videoDiv);
+		imageContainerDiv.appendChild(videoslistDiv);
 		ingredientsContainerDiv.appendChild(h4_ingre);
 		ingredientsContainerDiv.appendChild(ingreListDiv);
 		ingreListDiv.appendChild(list_ingredients_ul);
@@ -261,6 +276,7 @@ $(document).ready(function() {
 		mainDiv.appendChild(nutritionFacts_div);
 		document.getElementsByClassName('result')[0].appendChild(mainDiv);
 
+		app.searchVideos();
 		app.displayInfo(app.getIngredients(recipe), app.getNutritionFacts(recipe));
 
 	}
@@ -334,16 +350,7 @@ $(document).ready(function() {
 
 	}
 
-	app.isEmpty = function (object) {
-	    for(var key in object) {
-	        if(object.hasOwnProperty(key))
-	            return false;
-	    }
-	    return true;
-	}
-
 	$('.result').on("click", "button", function() {
-		console.log("hello!");
 		$('.recipe-info').fadeOut(500);
 		$(".result-box").fadeIn(1000);
 	})

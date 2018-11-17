@@ -7,12 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/master.css">
-<!--   <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script> -->
   <title>WikiCook</title>
 </head>
+
 <body>
-  <div class="wrapper">
+  <div id="wrapper">
     <button id="random-button" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Get Random Recipes!</button>
     <a href="html/search.html"><button id="startsearch-btn" class="btn btn-primary">Start Searching!</button></a>
     <div id="intro-content">
@@ -83,28 +82,12 @@
         </div>
       </div>
   </div>
+
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="js/random_recipe.js"></script>
   <script type="text/javascript" src="js/popper.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $("#random-recipe-nutritions").hide();
 
-      $("#ingre-tab").click(function () {
-        $("#random-recipe-ingredients").slideDown(500);
-        $("#random-recipe-nutritions").slideUp(500);
-        $(this).addClass("active");
-        $("#nutri-tab").removeClass("active");
-      })
-      $("#nutri-tab").click(function () {
-        $("#random-recipe-nutritions").slideDown(500);
-        $("#random-recipe-ingredients").slideUp(500);
-        $(this).addClass("active");
-        $("#ingre-tab").removeClass("active");
-      })
-    })
-  </script>
 </body>
 
 </html>

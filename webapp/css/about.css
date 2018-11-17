@@ -20,7 +20,6 @@
 .members {
 	margin: auto;
 	margin-top: 50px;
-	/* border: 1px solid black; */
 	width: 500px;
 }
 
@@ -30,4 +29,14 @@ ul li {
 
 #m-header {
 	font-weight: bold;
+}
+
+#otherinfo {
+	margin: auto;
+	margin-top: 10px;
+	width: 500px;
+}
+
+#otherinfo p {
+	font-size: 15px;
 }
